@@ -6,10 +6,7 @@
     flex-wrap: wrap;
   }
   
-  .sec-token img {
-    max-width: 100%;
-    height: auto;
-  }
+
   
   @media (max-width: 768px) {
     .sec-token {

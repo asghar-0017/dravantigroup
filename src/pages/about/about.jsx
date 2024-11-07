@@ -5,8 +5,36 @@ import Mission from './mission'
 import Tokanization from './tokanization'
 import AssetsManagment from './AssetsManagment'
 import SecurityImage from './SecurityImage'
+import { TableSection } from '../../components/table/table'
+import Counter from "../../components/counter/counter";
+import CorePartners from "../../components/corePartners/corePartners";
+
 
 const About = () => {
+  const sampleContent = [
+    {
+      heading: "Security",
+      paragraph:
+     "The Dravanti Token will be launched through a Security Token protocol, establishing high levels of trust and security, offering protection and stringent adherence to regulatory standards." 
+   },
+    {
+      heading: "Stability",
+      paragraph:
+      "Dravanti will maintain significant asset reserves, only releasing liquidity as part of a controlled execution. Asset backing provides intrinsic value and stability to the Dravanti Token."
+    },
+    {
+      heading: "Accessibility",
+      paragraph:
+      "The Dravanti Token will fully integrate into MBME Group payment points across the UAE, accepting cash, Visa, Mastercard, and other digital payment solutions, such as Google PAY and Apple PAY."
+    },
+    {
+      heading: "Verification",
+      paragraph:
+      "Customer on-boarding will be managed by Gulf Data International, ensuring end-to-end AML/KYC, with additional features maintained in the Smart Contract ensure robust verification at all times."
+    },
+  ];
+
+
   return (
     <>
     <div className='main-dev'>
@@ -44,8 +72,14 @@ const About = () => {
       </div>
       <Mission/>
       <Tokanization/>
+      <TableSection content={sampleContent} />
       <SecurityImage/>
       <AssetsManagment/>
+      <Counter />
+      <CorePartners />
+
+
+
 
     </div>
 
