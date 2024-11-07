@@ -5,7 +5,7 @@ import InvestorRegistrationForm from "../../components/investorRegistration/inve
 import Counter from "../../components/counter/counter";
 import DravantiLaunchAndScalability from "../../components/dravantiLaunchAndScalability/dravantiLaunchAndScalability";
 const History = lazy(() => import("../../components/history/history"));
-import "../../assets/style/home.css"
+import CorePartners from "../../components/corePartners/corePartners";
 
 const Home = () => {
   const sampleContent = [
@@ -38,6 +38,7 @@ const Home = () => {
       <DravantiLaunchAndScalability />
       <InvestorRegistrationForm />
       <Counter />
+      <CorePartners />
     </div>
   );
 };
