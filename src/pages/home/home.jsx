@@ -2,7 +2,10 @@ import React, { lazy } from "react";
 import DravantiToken from "../../components/dravantiToken/dravantiToken";
 import { TableSection } from "../../components/table/table";
 import InvestorRegistrationForm from "../../components/investorRegistration/investorRegistration";
+import Counter from "../../components/counter/counter";
+import DravantiLaunchAndScalability from "../../components/dravantiLaunchAndScalability/dravantiLaunchAndScalability";
 const History = lazy(() => import("../../components/history/history"));
+import "../../assets/style/home.css"
 
 const Home = () => {
   const sampleContent = [
@@ -32,7 +35,9 @@ const Home = () => {
       <History />
       <TableSection content={sampleContent} />
       <DravantiToken />
+      <DravantiLaunchAndScalability />
       <InvestorRegistrationForm />
+      <Counter />
     </div>
   );
 };

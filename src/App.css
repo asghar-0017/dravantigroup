@@ -18,6 +18,10 @@ html, body{
   background-color: #F2F2F2 !important;
 }
 
-.submit-btn{
+.dmSans{
   font-family: DMSans, sans-serif !important;
+}
+
+.avaerage{
+  font-family: Average, sans-serif !important;
 }

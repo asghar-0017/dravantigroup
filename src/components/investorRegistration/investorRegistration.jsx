@@ -14,7 +14,7 @@ const InvestorRegistrationForm = () => {
   return (
     <Container
       maxWidth="100%"
-      sx={{ p: 4, bgcolor: "#ffff", borderRadius: "8px" }}
+      sx={{ p: 4, bgcolor: "#ffff", borderRadius: "8px", paddingBottom: 20, paddingTop: 10 }}
     >
       <Grid container spacing={4} alignItems="center" justifyContent="center">
         <Grid
@@ -46,6 +46,7 @@ const InvestorRegistrationForm = () => {
               fontWeight="bold"
               fontSize={45}
               color="#253136"
+              className="avaerage"
               sx={{ fontWeight: "bold", lineHeight: "50px" }}
             >
               DRAVANTI
@@ -155,6 +156,7 @@ const InvestorRegistrationForm = () => {
                     backgroundColor: "#333",
                   },
                 }}
+                className="dmSans"
               >
                 Submit
               </Button>

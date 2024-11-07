@@ -34,8 +34,8 @@ const AnimatedNumber = ({ targetValue }) => {
 const CircleItem = ({ value, label }) => (
   <Box
     sx={{
-      width: { xs: 150, sm: 180, md: 200 },
-      height: { xs: 150, sm: 180, md: 200 },
+      width: { xs: 250, sm: 300, md: 300 },
+      height: { xs: 250, sm: 300, md: 300 },
       borderRadius: '50%',
       backgroundColor: 'transparent',
       border: '1px solid rgba(255, 255, 255, 0.2)',
@@ -47,16 +47,16 @@ const CircleItem = ({ value, label }) => (
       textAlign: 'center',
     }}
   >
-    <Typography variant="h4" component="div" sx={{ fontWeight: 'bold' }}>
-      <AnimatedNumber targetValue={value} />+
+    <Typography variant="h4" component="div" color='#DBE8E8' fontSize={46} className='dmSans' sx={{ fontWeight: 'bold', display: "flex", flexDirection: "row" }}>
+      {value == 20 ? "$" : ""}<AnimatedNumber targetValue={value} />&nbsp;+
     </Typography>
-    <Typography variant="body1" component="div">
+    <Typography variant="body1" component="div" color='#DBE8E8' fontSize={30} className='dmSans'>
       {label}
     </Typography>
   </Box>
 );
 
-const StatsSection = () => {
+const Counter = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
@@ -71,7 +71,7 @@ const StatsSection = () => {
     >
       <Grid
         container
-        spacing={isMobile ? 3 : 5}
+        spacing={2}
         justifyContent="center"
         alignItems="center"
       >
@@ -85,4 +85,4 @@ const StatsSection = () => {
   );
 };
 
-export default StatsSection;
+export default Counter;
