@@ -1,6 +1,10 @@
 import React from 'react';
 import goldLogo from '../../assets/images/dravanti-gold-logo.png';
 import '../../assets/style/divranti.css'
+import Mission from './mission'
+import Tokanization from './tokanization'
+import AssetsManagment from './AssetsManagment'
+import SecurityImage from './SecurityImage'
 
 const About = () => {
   return (
@@ -38,6 +42,11 @@ const About = () => {
       </div>
       
       </div>
+      <Mission/>
+      <Tokanization/>
+      <SecurityImage/>
+      <AssetsManagment/>
+
     </div>
 
     </>
