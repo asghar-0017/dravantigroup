@@ -9,7 +9,11 @@
 }
 
 *{
+  font-family: Average !important;
+}
+
+html, body{
   margin: 0;
   padding: 0;
-  font-family: Average !important;
+  background-color: #F2F2F2 !important;
 }

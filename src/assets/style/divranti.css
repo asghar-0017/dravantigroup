@@ -1,0 +1,72 @@
+.containers{
+  text-align: center;
+  /* padding: 20px; */
+  margin: 0 auto;
+  color: #6D6D6D;
+  font: 60px;
+  background-color:#F9F9F9;
+}
+.heading{
+    font-size: 3.3rem;
+    font-weight:lighter;
+    color: #6D6D6D;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+.logo{
+    width: 270px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
+    display: flex;
+
+}
+
+.description{
+    box-sizing: border-box;
+    font-size: 1.36rem;
+    line-height: 1.15;
+    color: #92BCB3;
+    font-weight: 800;
+    margin-top: 70px;
+    text-align: center;
+    background-color: #F2F2F2 !important;
+
+
+}
+
+.horoizontal-line{
+    margin-top: 60px;
+}
+
+/* About Dirivanti */
+
+.about-dirivanti{
+    text-align: center;
+}
+
+.about{
+    font-size: 2.8rem;
+    font-weight:lighter;
+    color: #6D6D6D;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.space{
+margin: 70px;
+}
+.paragraph{
+    margin: 10px;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 400;
+    color: #7A7A7A;
+    display: block;
+    background-color: #F2F2F2 !important;
+    
+
+}

@@ -1,10 +1,10 @@
-import React from 'react'
-import Navbar from '../../components/navbar/navbar'
+import React, { lazy } from 'react'
+const History = lazy(() => import("../../components/history/history"));
 
 const Home = () => {
   return (
     <div>
-      {/* <Navbar/> */}
+      <History />
     </div>
   )
 }
