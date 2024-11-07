@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { lazy } from 'react'
+const History = lazy(() => import("../../components/history/history"));
 
 const Home = () => {
   return (
     <div>
-      Home
+      <History />
     </div>
   )
 }
