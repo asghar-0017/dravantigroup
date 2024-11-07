@@ -16,7 +16,7 @@ const Tokanization = () => {
       <div className="timeline-graph-container">
         <div className="timeline">
           <div className="timeline-item">
-          <FaRegCheckCircle className="icon" />
+          <FaRegCheckCircle fontSize={30} color='#4B6F6B' />
           <div className="timeline-content">
               <span className="strong">2018</span>
               <div className="timeline-text">
@@ -25,7 +25,7 @@ const Tokanization = () => {
             </div>
           </div>
           <div className="timeline-item">
-          <FaRegCheckCircle className="icon" />
+          <FaRegCheckCircle fontSize={30} color='#4B6F6B' />
           <div className="timeline-content">
               <span className="strong">2019 - 2020</span>
               <div className="timeline-text">
@@ -34,7 +34,7 @@ const Tokanization = () => {
             </div>
           </div>
           <div className="timeline-item">
-          <FaRegCheckCircle className="icon" />
+          <FaRegCheckCircle fontSize={30} color='#4B6F6B' />
           <div className="timeline-content">
               <span className="strong">2023</span>
               <div className="timeline-text">
@@ -46,7 +46,7 @@ const Tokanization = () => {
             </div>
           </div>
           <div className="timeline-item">
-          <FaRegCheckCircle className="icon" />
+          <FaRegCheckCircle fontSize={30} color='#4B6F6B' />
           <div className="timeline-content">
               <span className="strong">2024</span>
               <div className="timeline-text">

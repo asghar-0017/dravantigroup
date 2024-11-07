@@ -44,7 +44,6 @@ const About = () => {
       </div>
 
     <div className='description'>Dravanti Middle East, known as “Dravanti”, “Dravanti Group”, or ‘DME’, is a commodity and real-world-asset (RWA) focused Virtual Asset Portfolio Provider.  Dravanti offers a highly secure, stable, and scalable Virtual Asset investment vehicle, offering investors and owners of the Token access to a diversified RWA portfolio.</div>
-    {/* Horizal Line */}
     <div className='horoizontal-line'>
       <hr />
     </div>
