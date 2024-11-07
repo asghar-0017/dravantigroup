@@ -1,8 +1,10 @@
 import React from "react";
 import { Box, Grid, Typography, Button } from "@mui/material";
 import DravantiTokenImg from "../../assets/images/dravanti-token.png";
+import { useNavigate } from "react-router-dom";
 
 const DravantiToken = () => {
+    let navigate = useNavigate()
   return (
     <Box
       sx={{
