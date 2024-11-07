@@ -1,5 +1,5 @@
 import React from 'react';
-import goldLogo from '../../assets/images/DravantiME-Logo-Gold-MAIN-300x174.png';
+import goldLogo from '../../assets/images/dravanti-gold-logo.png';
 import '../../assets/style/divranti.css'
 
 const About = () => {
@@ -13,3 +13,5 @@ const About = () => {
     </>
   );
 };
+
+export default About
