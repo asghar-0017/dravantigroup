@@ -1,0 +1,102 @@
+.parent {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 15px;
+  }
+  
+  .main-div {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .heading-tokanization {
+    font-size: 2.7rem;
+    font-weight:400;
+    color: #6D6D6D;
+    margin: 20px;
+    text-align: center !important;
+  }
+  
+  .description-tokanization {
+    font-size: 1.03rem;
+    line-height: 1.6;
+    color: #7A7A7A;
+    font-weight:400;
+    margin-bottom: 30px;
+  }
+  
+  .timeline-graph-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .timeline-text{
+  margin-top: 10px;
+  }
+  .timeline {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .timeline-item {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .icon {
+    font-size: 1.4rem;
+    color: #4B6F6B;
+  }
+  
+  .timeline-content {
+    font-size: 0.95rem;
+    color: #7A7A7A;
+    line-height: 1.5;
+  }
+  
+  .strong {
+    font-size: 1.1rem;
+    /* font-weight: bold; */
+    color: #000;
+  }
+  
+  .graph-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .graph-image {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+  }
+  
+  .future-market {
+    font-size: 1rem;
+    color: #3E6560;
+    margin-top: 15px;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .timeline-graph-container {
+      flex-direction: column;
+    }
+  
+    .timeline {
+      gap: 15px;
+    }
+  }
+  

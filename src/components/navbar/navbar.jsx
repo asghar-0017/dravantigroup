@@ -4,7 +4,7 @@ import { FaChevronDown, FaTimes } from "react-icons/fa";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 import logo from "../../assets/images/logo.png";
-import "../../assets/styles/navbar.css";
+import "../../assets/style/navbar.css";
 import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
