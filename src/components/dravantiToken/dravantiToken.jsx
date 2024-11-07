@@ -9,7 +9,7 @@ const DravantiToken = () => {
         position: "relative",
         width: "100%",
         overflow: "hidden",
-        minHeight: "500px",
+        minHeight: "550px",
       }}
     >
       <Box
@@ -30,7 +30,7 @@ const DravantiToken = () => {
           left: 0,
           width: "100%",
           height: "60%",
-          bgcolor: "white",
+          bgcolor: "#F2F2F2",
         }}
       />
 

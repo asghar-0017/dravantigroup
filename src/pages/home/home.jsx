@@ -1,6 +1,7 @@
 import React, { lazy } from "react";
 import DravantiToken from "../../components/dravantiToken/dravantiToken";
 import { TableSection } from "../../components/table/table";
+import InvestorRegistrationForm from "../../components/investorRegistration/investorRegistration";
 const History = lazy(() => import("../../components/history/history"));
 
 const Home = () => {
@@ -31,6 +32,7 @@ const Home = () => {
       <History />
       <TableSection content={sampleContent} />
       <DravantiToken />
+      <InvestorRegistrationForm />
     </div>
   );
 };

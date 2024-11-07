@@ -1,37 +1,98 @@
-import React from 'react';
-import { Container, Grid, Typography, TextField, Button, Box } from '@mui/material';
+import React from "react";
+import { useForm } from "react-hook-form";
+import { Container, Grid, Typography, TextField, Button, Box } from "@mui/material";
+import DravantiGold from "../../assets/images/dravanti-gold-logo.png"; 
+import DravantiGold2 from "../../assets/images/dravanti-gold-2.png"; 
 
 const InvestorRegistrationForm = () => {
+  const { register, handleSubmit, formState: { errors } } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data); 
+  };
+
   return (
-    <Container maxWidth="md" sx={{ p: 4, bgcolor: '#f8f8f8', borderRadius: '8px' }}>
+    <Container
+      maxWidth="100%"
+      sx={{ p: 4, bgcolor: "#ffff", borderRadius: "8px" }}
+    >
       <Grid container spacing={4} alignItems="center" justifyContent="center">
-        {/* Left Side: Logo and Company Name */}
-        <Grid item xs={12} md={5} display="flex" flexDirection="column" alignItems="center">
+        <Grid
+          item
+          xs={12}
+          md={5}
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+        >
           <Box
             component="img"
-            src="path/to/logo.png"  // Replace with your logo path
-            alt="Logo"
-            sx={{ width: 100, height: 100, mb: 2 }}
+            src={DravantiGold2}
+            alt="Dravanti Gold Logo"
+            sx={{ width: 120, height: 120, mb: 2 }}
+            loading="lazy"
           />
-          <Typography variant="h5" align="center" fontWeight="bold">
-            DRAVANTI <br /> Middle East
-          </Typography>
+          <Grid container alignItems="center" justifyContent="center">
+            <Box
+              component="img"
+              src={DravantiGold}
+              alt="Dravanti Gold Logo 2"
+              sx={{ width: 150, height: 100, marginRight: 1 }}
+              loading="lazy"
+            />
+            <Typography
+              variant="h5"
+              align="center"
+              fontWeight="bold"
+              fontSize={45}
+              color="#253136"
+              sx={{ fontWeight: "bold", lineHeight: "50px" }}
+            >
+              DRAVANTI
+              <Typography
+                variant="h6"
+                align="center"
+                fontWeight="bold"
+                textAlign="left"
+                fontSize={31}
+                color="#253136"
+              >
+                Middle East
+              </Typography>
+            </Typography>
+          </Grid>
         </Grid>
 
-        {/* Right Side: Form */}
         <Grid item xs={12} md={7}>
-          <Box sx={{ textAlign: 'center', mb: 3 }}>
+          <Box sx={{ textAlign: "center", mb: 3 }}>
             <Typography variant="h4" fontWeight="bold" gutterBottom>
               Investor Registration
             </Typography>
           </Box>
 
-          <Box component="form" noValidate autoComplete="off">
+          <Box component="form" onSubmit={handleSubmit(onSubmit)} noValidate autoComplete="off">
             <TextField
               fullWidth
               label="Name"
               variant="outlined"
               margin="normal"
+              error={!!errors.name}
+              helperText={errors.name ? "This field is required. Please input your name" : ""}
+              {...register("name", { required: "Name is required" })}
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  borderTop: "none",
+                  borderLeft: "none",
+                  borderRight: "none",
+                  borderBottom: "2px solid #ccc",
+                },
+                "& .MuiOutlinedInput-notchedOutline": {
+                  border: "none",
+                },
+                "& .MuiInputLabel-root": {
+                  transform: "translate(14px, 14px) scale(1)",
+                },
+              }}
             />
             <TextField
               fullWidth
@@ -39,16 +100,62 @@ const InvestorRegistrationForm = () => {
               variant="outlined"
               margin="normal"
               type="email"
+              error={!!errors.email}
+              helperText={errors.email ? "This field is required. Please input a valid email " : ""}
+              {...register("email", { required: "Email is required" })}
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  borderTop: "none",
+                  borderLeft: "none",
+                  borderRight: "none",
+                  borderBottom: "2px solid #ccc",
+                },
+                "& .MuiOutlinedInput-notchedOutline": {
+                  border: "none",
+                },
+                "& .MuiInputLabel-root": {
+                  transform: "translate(14px, 14px) scale(1)",
+                },
+              }}
             />
             <TextField
               fullWidth
               label="Please enter your referral code"
               variant="outlined"
               margin="normal"
+              error={!!errors.referralCode}
+              helperText={errors.referralCode ? "This field is required. Please a text" : ""}
+              {...register("referralCode", { required: "Referral code is required" })}
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  borderTop: "none",
+                  borderLeft: "none",
+                  borderRight: "none",
+                  borderBottom: "2px solid #ccc",
+                },
+                "& .MuiOutlinedInput-notchedOutline": {
+                  border: "none",
+                },
+                "& .MuiInputLabel-root": {
+                  transform: "translate(14px, 14px) scale(1)",
+                },
+              }}
             />
 
-            <Box textAlign="center" mt={2}>
-              <Button variant="contained" color="primary" size="large">
+            <Box textAlign="left" mt={2}>
+              <Button
+                variant="contained"
+                type="submit"
+                sx={{
+                  backgroundColor: "black",
+                  color: "white",
+                  paddingX: 3,
+                  fontSize: "14px",
+                  "&:hover": {
+                    backgroundColor: "#333",
+                  },
+                }}
+              >
                 Submit
               </Button>
             </Box>
