@@ -4,7 +4,7 @@ import { FaChevronDown, FaTimes } from 'react-icons/fa'; // Import React Icons f
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa'; // Import social media icons
 
 import logo from '../../assets/images/logo.png';
-import '../../assets/styles/navbar.css';
+import '../../assets/style/navbar.css';
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
