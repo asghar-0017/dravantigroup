@@ -8,6 +8,7 @@ import SecurityImage from './SecurityImage'
 import { TableSection } from '../../components/table/table'
 import Counter from "../../components/counter/counter";
 import CorePartners from "../../components/corePartners/corePartners";
+import FeaturesSection from './FeaturesSection'
 
 
 const About = () => {
@@ -40,7 +41,7 @@ const About = () => {
     <div className='main-dev'>
       <div className='containers'>
       <h2 className='heading'>DRAVANTI Middle East</h2>
-      <img  className='logo'src={goldLogo} alt="Dravanti Logo" />
+      <img  className='divrantri-logo'src={goldLogo} alt="Dravanti Logo" />
       </div>
 
     <div className='description'>Dravanti Middle East, known as “Dravanti”, “Dravanti Group”, or ‘DME’, is a commodity and real-world-asset (RWA) focused Virtual Asset Portfolio Provider.  Dravanti offers a highly secure, stable, and scalable Virtual Asset investment vehicle, offering investors and owners of the Token access to a diversified RWA portfolio.</div>
@@ -74,6 +75,7 @@ const About = () => {
       <TableSection content={sampleContent} />
       <SecurityImage/>
       <AssetsManagment/>
+      <FeaturesSection/>
       <Counter />
       <CorePartners />
 

@@ -4,7 +4,7 @@ import '../../assets/style/SecurityImage.css'
 
 const SecurityImage = () => {
   return (
-    <div>
+    <div className='container'>
       <div className="sec-token">
       <img src={secImage} alt="Tokenization Visual" />
     </div>

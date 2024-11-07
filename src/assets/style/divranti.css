@@ -1,7 +1,7 @@
 .containers{
   text-align: center;
   /* padding: 20px; */
-  margin: 0 auto;
+  margin: 0 auto !important;
   color: #6D6D6D;
   font: 60px;
   background-color:#F9F9F9;
@@ -10,7 +10,7 @@
     font-size: 3.3rem;
     font-weight:lighter;
     color: #6D6D6D;
-    text-align: center;
+    text-align: center !important;
     justify-content: center;
     align-items: center;
 
@@ -20,7 +20,7 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    margin: 0 auto;
+    margin: 0 auto !important;
     display: flex;
 
 }

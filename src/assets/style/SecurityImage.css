@@ -1,17 +1,29 @@
-.sec-token {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    margin-top: 5rem;
-    flex-wrap: wrap;
-  }
-  
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px; /* Adds padding for better alignment on small screens */
+}
 
-  
-  @media (max-width: 768px) {
-    .sec-token {
-      margin-top: 3rem; 
-      padding: 0 10px;
-    }
+.sec-token {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.sec-token img {
+  width: 100%; /* Ensures the image takes up the full width of its container */
+  max-width: 600px; /* Sets a maximum width to prevent it from getting too large on bigger screens */
+  height: auto; /* Maintains the image's aspect ratio */
+  object-fit: cover; /* Ensures that the image scales properly */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sec-token {
+    margin-top: 3rem; /* Adjusts margin for smaller screens */
   }
   
+  .sec-token img {
+    max-width: 100%; /* Ensures image scales down fully on smaller screens */
+  }
+}
