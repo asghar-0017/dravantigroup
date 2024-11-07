@@ -1,0 +1,92 @@
+.footer {
+    width: 100%;
+    background-color:#111A1D ;
+    color:#868F91 ;
+    padding: 20px 0;
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: start;
+    /* width: 100%; */
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px 0;
+    padding-top: 5rem;
+}
+.footer-section h3 {
+    margin-top: 0;
+    font-size: 18px;
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin: 10px 0;
+}
+.footer-section ul li a {
+    color: #868F91;
+    text-decoration: none;
+}
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+.footer-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+}
+.footer-sub-bottom a {
+    text-decoration: none;
+    color: #868F91;
+    margin: 7px;
+}
+.footer-icon{
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: center;
+}
+.footer-icon  img{
+    width: 40px;
+}
+
+@media (max-width: 600px) {
+    .container2 {
+        padding: 15px;
+    }
+
+    .contact-form h2 {
+        font-size: 20px;
+    }
+
+    .contact-form button {
+        font-size: 14px;
+    }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-section {
+        text-align: center;
+    }
+    .main-container{
+        flex-direction: column;
+    }
+    .footer-bottom{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
