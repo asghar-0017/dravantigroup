@@ -12,8 +12,8 @@ const HeroSection = () => {
 
   const textSlides = [
     { text: 'A global and accessible Real-World-Asset offering.', subtext: '-Secure. Stable. Scalable.' },
-    { text: 'Welcome to Dravanti Middle East.', subtext: '-Building the Portfolio of the Future.' },
     { text: 'A Global and Accessible Real-World-Assets Offering.', subtext: '-Secure. Transparent. Scalable.' },
+    { text: 'Welcome to Dravanti Middle East.', subtext: '-Building the Portfolio of the Future.' },
   ];
 
   const imageSettings = {
@@ -60,9 +60,9 @@ const HeroSection = () => {
       <Box
         sx={{
           position: 'absolute',
-          bottom: '35%',
+          bottom: '25%',
           right: '5%',
-          width: '55%',
+          width: { xs: '90%', sm: '70%', md: '55%' }, 
           backgroundColor: 'rgba(0, 0, 0, 0.7)',
           color: 'white',
           padding: 4,
@@ -73,10 +73,23 @@ const HeroSection = () => {
         <Slider {...textSettings}>
           {textSlides.map((slide, index) => (
             <Box key={index}>
-              <Typography variant="h4" sx={{ fontWeight: 'bold', paddingBottom: 1, fontSize: "45px" }}>
+              <Typography
+                variant="h4"
+                sx={{
+                  fontWeight: 'bold',
+                  paddingBottom: 1,
+                  fontSize: { xs: '30px', sm: '35px', md: '45px' },
+                }}
+              >
                 {slide.text}
               </Typography>
-              <Typography variant="h6" sx={{ fontWeight: 'bold',   fontSize: "35px"}}>
+              <Typography
+                variant="h6"
+                sx={{
+                  fontWeight: 'bold',
+                  fontSize: { xs: '20px', sm: '25px', md: '35px' }, 
+                }}
+              >
                 {slide.subtext}
               </Typography>
             </Box>
