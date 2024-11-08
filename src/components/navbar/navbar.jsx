@@ -69,7 +69,7 @@ const Navbar = () => {
               {expanded.Partners && (
                 <ul className="submenu ">
                   <li>
-                    <NavLink to="/partners/partner1" className="submenu-link ">
+                    <NavLink to="/interMTraders" className="submenu-link ">
                       Inter-M Traders FZ LLC
                     </NavLink>
                   </li>
