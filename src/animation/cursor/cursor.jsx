@@ -7,8 +7,8 @@ export const Cursor = () => {
   useEffect(() => {
     const handleMouseMove = (event) => {
       setCursorPosition({
-        x: event.pageX,
-        y: event.pageY
+        x: event.clientX, 
+        y: event.clientY 
       });
     };
 
@@ -26,22 +26,21 @@ export const Cursor = () => {
       ease: 'power4.out',
       duration: 0.3
     });
-  }, [cursorPosition]);  
+  }, [cursorPosition]);
 
   return (
     <div
       className="cursor"
       style={{
-        position: 'fixed',
+        position: 'fixed', 
         width: '30px',
         height: '30px',
         borderRadius: '50%',
-        backgroundColor: 'rgb(183, 180, 180, 0.6)',
-        pointerEvents: 'none', 
+        backgroundColor: 'rgba(183, 180, 180, 0.6)',
+        pointerEvents: 'none',
         transform: 'translate(-50%, -50%)',
-        zIndex: 9999 
+        zIndex: 10000
       }}
     />
   );
 };
-
