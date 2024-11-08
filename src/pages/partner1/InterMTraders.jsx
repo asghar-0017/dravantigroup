@@ -19,7 +19,7 @@ const InterMTraders = () => {
     //   </div>
     // </div>
     <>
-    <div className="main-container">
+    <div className="main-container" style={{paddingTop: "120px"}}>
         <h1 style={{marginTop:'20px'}}>Inter-M Traders FZ LLE</h1>
       <div className="header">
         <div style={{width:'100%'}}>

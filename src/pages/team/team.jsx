@@ -13,6 +13,7 @@ const TeamSection = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        paddingTop: "120px"
       }}
     >
       <Grid

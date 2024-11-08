@@ -1,22 +1,47 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { Container, Grid, Typography, TextField, Button, Box } from "@mui/material";
-import DravantiGold from "../../assets/images/dravanti-gold-logo.png"; 
-import DravantiGold2 from "../../assets/images/logo2.webp"; 
+import {
+  Container,
+  Grid,
+  Typography,
+  TextField,
+  Button,
+  Box,
+} from "@mui/material";
+import DravantiGold from "../../assets/images/dravanti-gold-logo.png";
+import DravantiGold2 from "../../assets/images/logo2.webp";
 
 const SubscribeForUpdates = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data); 
+    console.log(data);
   };
 
   return (
     <Container
       maxWidth="100%"
-      sx={{ p: 4, bgcolor: "#253136", paddingBottom: 20, paddingTop: 20 , display: "flex", alignItems: "center", justifyContent: "center"}}
+      sx={{
+        p: 4,
+        bgcolor: "#253136",
+        paddingBottom: 20,
+        paddingTop: 20,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
     >
-      <Grid container spacing={4} alignItems="center" justifyContent="center" sx={{bgcolor: "#ffff", borderRadius: "20px", p: 3, width: "90%"}}>
+      <Grid
+        container
+        spacing={4}
+        alignItems="center"
+        justifyContent="center"
+        sx={{ bgcolor: "#ffff", borderRadius: "20px", p: 3, width: "90%" }}
+      >
         <Grid
           item
           xs={12}
@@ -67,18 +92,27 @@ const SubscribeForUpdates = () => {
         <Grid item xs={12} md={7}>
           <Box sx={{ textAlign: "center", mb: 3 }}>
             <Typography variant="h4" fontWeight="bold" gutterBottom>
-            Subscribe for updates
+              Subscribe for updates
             </Typography>
           </Box>
 
-          <Box component="form" onSubmit={handleSubmit(onSubmit)} noValidate autoComplete="off">
+          <Box
+            component="form"
+            onSubmit={handleSubmit(onSubmit)}
+            noValidate
+            autoComplete="off"
+          >
             <TextField
               fullWidth
               label="Name"
               variant="outlined"
               margin="normal"
               error={!!errors.name}
-              helperText={errors.name ? "This field is required. Please input your name" : ""}
+              helperText={
+                errors.name
+                  ? "This field is required. Please input your name"
+                  : ""
+              }
               {...register("name", { required: "Name is required" })}
             />
             <TextField
@@ -88,7 +122,11 @@ const SubscribeForUpdates = () => {
               margin="normal"
               type="email"
               error={!!errors.email}
-              helperText={errors.email ? "This field is required. Please input a valid email " : ""}
+              helperText={
+                errors.email
+                  ? "This field is required. Please input a valid email "
+                  : ""
+              }
               {...register("email", { required: "Email is required" })}
             />
             <Box textAlign="left" mt={2}>
@@ -100,18 +138,23 @@ const SubscribeForUpdates = () => {
                   color: "white",
                   paddingX: 3,
                   fontSize: "14px",
-                  borderRadius:"20px",
+                  borderRadius: "20px",
                   "&:hover": {
                     backgroundColor: "#81A89F",
                   },
-                  width: "100%"
+                  width: "100%",
                 }}
                 className="dmSans"
               >
                 Send
               </Button>
             </Box>
-            <Typography sx={{fontSize: 12, textAlign: "center", marginTop: "10px"}}>Dravanti does not maintain a Newsletter, and will only send information on key announcements.</Typography>
+            <Typography
+              sx={{ fontSize: 12, textAlign: "center", marginTop: "10px" }}
+            >
+              Dravanti does not maintain a Newsletter, and will only send
+              information on key announcements.
+            </Typography>
           </Box>
         </Grid>
       </Grid>
