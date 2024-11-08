@@ -33,14 +33,16 @@ const TeamSection = () => {
           mb={4}
         >
           <img
+            loading="lazy"
             src={Interim}
             alt="Logo 1"
             style={{
-              width: "100%",        // The image will take up 100% of the available width of its container
-              maxWidth: 300,       // The image will not exceed 300px in width
-              height: "auto",      // Height adjusts automatically to maintain aspect ratio
-              marginBottom: 16     // Keep the margin at the bottom
-            }}          />
+              width: "100%",
+              maxWidth: 300,
+              height: "auto",
+              marginBottom: 16,
+            }}
+          />
           <Typography
             variant="h5"
             color="#47776E"
@@ -418,6 +420,7 @@ const TeamSection = () => {
           borderTop="2px solid black"
         >
           <img
+            loading="lazy"
             src={MBME}
             alt="Logo 1"
             style={{ width: 150, height: "auto", marginBottom: 16 }}
@@ -645,13 +648,14 @@ const TeamSection = () => {
           borderTop="2px solid black"
         >
           <img
+            loading="lazy"
             src={GDI}
             alt="Logo 1"
             style={{
-              width: "100%",        // The image will take up 100% of the available width of its container
-              maxWidth: 250,       // The image will not exceed 300px in width
-              height: "auto",      // Height adjusts automatically to maintain aspect ratio
-              marginBottom: 16     // Keep the margin at the bottom
+              width: "100%",
+              maxWidth: 250,
+              height: "auto",
+              marginBottom: 16,
             }}
           />
           <Typography
