@@ -15,7 +15,9 @@ import twitter from '../../assets/images/twitter.png'
          <footer className="footer">
     <div class="footer-container container">
       <div class="footer-section" style={{width:'100%'}}>
-        <img style={{width:'80%'}} src={logo}  alt="#"/>      </div>
+        <img style={{width:'80%'}} src={logo}  alt="#"/>  
+        
+            </div>
       <div class="footer-section" >
         <h1>Home</h1>
         <ul>
@@ -44,8 +46,8 @@ Unite Arab Emirates</li>
           <a href="http://" target="_blank" rel="noopener noreferrer"><img src={telegram} alt="" /></a>
           <a href="http://" target="_blank" rel="noopener noreferrer"><img src={twitter} alt="" /></a>
           <a href="http://" target="_blank" rel="noopener noreferrer"><img src={letter} alt="" /></a>
-          
         </div>
+        <div style={{paddingLeft:'30px',paddingTop:'10px'}}><h5>(Coming Soon)</h5></div>
       </div>
     </div>
     <div class="footer-bottom">
