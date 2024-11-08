@@ -41,7 +41,7 @@ const Home = () => {
       <DravantiToken />
       <DravantiLaunchAndScalability />
       <InvestorRegistrationForm />
-      <Counter />
+      <Counter bg={"001E3C"}/>
       <CorePartners />
       <Contact />
     </div>
