@@ -3,6 +3,20 @@ import { gsap } from 'gsap';
 
 export const Cursor = () => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize(); 
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const handleMouseMove = (event) => {
@@ -29,18 +43,20 @@ export const Cursor = () => {
   }, [cursorPosition]);
 
   return (
-    <div
-      className="cursor"
-      style={{
-        position: 'fixed', 
-        width: '30px',
-        height: '30px',
-        borderRadius: '50%',
-        backgroundColor: 'rgba(183, 180, 180, 0.6)',
-        pointerEvents: 'none',
-        transform: 'translate(-50%, -50%)',
-        zIndex: 10000
-      }}
-    />
+    !isMobile && (
+      <div
+        className="cursor"
+        style={{
+          position: 'fixed', 
+          width: '30px',
+          height: '30px',
+          borderRadius: '50%',
+          backgroundColor: 'rgba(183, 180, 180, 0.6)',
+          pointerEvents: 'none',
+          transform: 'translate(-50%, -50%)',
+          zIndex: 10000
+        }}
+      />
+    )
   );
 };
