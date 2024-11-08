@@ -6,6 +6,7 @@ import subBanner from '../../assets/images/subinterm.png'
 import CustomShape from '../../components/testIcons/icon'
 import InvestorRegistrationForm from '../../components/investorRegistration/investorRegistration'
 import {  Button, Box } from "@mui/material";
+import SubscribeForUpdates from '../../components/subscribeForUpdate/subscribeForUpdate'
 const InterMTraders = () => {
   return (
     // <div>
@@ -94,7 +95,7 @@ const InterMTraders = () => {
       
     </div>
     
-    <div><InvestorRegistrationForm/></div>
+    <div><SubscribeForUpdates /></div>
     
     </>
   );
