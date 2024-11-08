@@ -7,6 +7,7 @@ import DravantiLaunchAndScalability from "../../components/dravantiLaunchAndScal
 const History = lazy(() => import("../../components/history/history"));
 import CorePartners from "../../components/corePartners/corePartners";
 import Contact from "../../components/contact/contact";
+import HeroSection from "../../components/heroSection/herSection";
 
 const Home = () => {
   const sampleContent = [
@@ -33,6 +34,7 @@ const Home = () => {
   ];
   return (
     <div>
+      <HeroSection />
       <History />
       <TableSection content={sampleContent} />
       <DravantiToken />

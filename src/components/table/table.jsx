@@ -2,13 +2,12 @@ import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
 
 export const TableSection = ({ content }) => (
-  <Box sx={{ width: "98%", padding: { xs: 0, md: 0 }, mt: 15, mb: 5 }}>
+  <Box sx={{ width: "100%", padding: { xs: 0, md: 0 }, mt: 15, mb: 5 }}>
     <Grid
       container
       spacing={3}
       sx={{
-        marginLeft: "auto",
-        marginRight: "auto",
+        // marginRight: "auto",
       }}
     >
       {content.map((item, index) => (

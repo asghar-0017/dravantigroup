@@ -9,6 +9,7 @@ import { TableSection } from '../../components/table/table'
 import Counter from "../../components/counter/counter";
 import CorePartners from "../../components/corePartners/corePartners";
 import FeaturesSection from './FeaturesSection'
+import BannerSection from '../../components/banner/banner';
 
 
 const About = () => {
@@ -38,7 +39,8 @@ const About = () => {
 
   return (
     <>
-    <div className='main-dev'>
+    <BannerSection pageName="Dravanti" name="Dravanti"/>
+    <div className='main-dev' style={{marginTop: "50px"}}>
       <div className='containers'>
       <h2 className='heading'>DRAVANTI Middle East</h2>
       <img  className='divrantri-logo'src={goldLogo} alt="Dravanti Logo" />
