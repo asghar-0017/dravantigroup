@@ -74,7 +74,7 @@ const Navbar = () => {
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/partners/partner2" className="submenu-link">
+                    <NavLink to="/MBMEgroup" className="submenu-link">
                       MBME Group
                     </NavLink>
                   </li>

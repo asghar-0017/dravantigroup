@@ -9,6 +9,7 @@ const News = lazy(() => import("../../pages/news/news"));
 const Navbar = lazy(() => import("../../components/navbar/navbar"));
 const Footer = lazy(() => import("../../components/footer/footer"));
 const InterMTraders = lazy(() => import("../../pages/partner1/InterMTraders"));
+const MBMEgroup =lazy(()=> import("../../pages/partner1/MBMEgroup"))
 
 const Router = () => {
   return (
@@ -29,6 +30,7 @@ const Router = () => {
           <Route path="/news" element={<News />} />
           {/* sub1 Page */}
           <Route path="/interMTraders" element={<InterMTraders/>} />
+          <Route path="/MBMEgroup" element={<MBMEgroup/>} />
         </Routes>
         <Footer />
       </BrowserRouter>

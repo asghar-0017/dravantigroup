@@ -2,7 +2,7 @@ import React from 'react';
 import '../../assets/style/tokanization.css'; // Ensure this is linked correctly
 import tokanizationGraph from '../../assets/images/tokanozation-graph.png';
 import { FaRegCheckCircle } from "react-icons/fa";
-
+  
 const Tokanization = () => {
   return (
     <div className="parent">
