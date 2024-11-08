@@ -10,6 +10,8 @@ import { HashLink } from "react-router-hash-link";
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [expanded, setExpanded] = useState({});
+  const [isVisible, setIsVisible] = useState(true);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
@@ -23,18 +25,35 @@ const Navbar = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // If the current page is home and the hash exists, scroll to that section
-    if (location.hash === '#contact' && location.pathname === '/') {
-      const element = document.getElementById('contact');
+    if (location.hash === "#contact" && location.pathname === "/") {
+      const element = document.getElementById("contact");
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
   }, [location]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+
+      if (currentScrollPos < scrollPosition || currentScrollPos < 10) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+      setScrollPosition(currentScrollPos);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [scrollPosition]);
+
   return (
     <>
-      <div className="navbar">
+      <div
+        className={`navbar ${isVisible ? "navbar-visible" : "navbar-hidden"}`}
+      >
         <div className="navbar-logo" style={{ width: "20%" }}>
           <img
             style={{ width: "100%" }}
@@ -62,14 +81,12 @@ const Navbar = () => {
             </li>
             <li className="dropdown" onClick={() => toggleDropdown("Partners")}>
               <NavLink>
-                Partners
-                <FaChevronDown className="dropdown-icon" />
+                Partners <FaChevronDown className="dropdown-icon" />
               </NavLink>
-
               {expanded.Partners && (
-                <ul className="submenu ">
+                <ul className="submenu">
                   <li>
-                    <NavLink to="/interMTraders" className="submenu-link ">
+                    <NavLink to="/interMTraders" className="submenu-link">
                       Inter-M Traders FZ LLC
                     </NavLink>
                   </li>
@@ -95,14 +112,13 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li>
-            <HashLink
-        smooth
-         to="/#contact"
-        className={({ isActive }) => (isActive ? "active-link" : "")}
-      >
-        Contact
-      </HashLink>
-
+              <HashLink
+                to="/#contact"
+                smooth
+                className={({ isActive }) => (isActive ? "active-link" : "")}
+              >
+                Contact
+              </HashLink>
             </li>
             <li>
               <NavLink
@@ -114,7 +130,6 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-
         <div>
           <button className="investor-login-btn">Investor Login</button>
         </div>
@@ -127,7 +142,7 @@ const Navbar = () => {
         <div className="sidebar-header">
           <h1>
             Let's make things <br />
-            <span style={{ color: "#828c8f" }}>happens</span>
+            <span style={{ color: "#828c8f" }}>happen</span>
           </h1>
           <button className="close-btn" onClick={toggleSidebar}>
             <FaTimes />
@@ -142,7 +157,11 @@ const Navbar = () => {
                   onClick={() => toggleDropdown(item)}
                 >
                   <NavLink
-                    to={`/${item.toLowerCase().replace(/\s+/g, "")}`}
+                    to={
+                      item === "Home"
+                        ? "/" 
+                        : item === "Dravanti" ? "/about" : item === "Contact Us" ? "/#contact" : `/${item.toLowerCase().replace(/\s+/g, "")}`
+                    }
                     className={({ isActive }) =>
                       isActive ? "active-link" : ""
                     }
@@ -165,33 +184,18 @@ const Navbar = () => {
                   item !== "News" && (
                     <ul className="submenu">
                       <li>
-                        <NavLink
-                          to={`/partners/${item
-                            .toLowerCase()
-                            .replace(/\s+/g, "")}/partner1`}
-                          className="submenu-link"
-                        >
+                        <NavLink to={`/interMTraders`} className="submenu-link">
                           Inter-M Traders FZ LLC
                         </NavLink>
                       </li>
                       <li>
-                        <NavLink
-                          to={`/partners/${item
-                            .toLowerCase()
-                            .replace(/\s+/g, "")}/partner2`}
-                          className="submenu-link"
-                        >
+                        <NavLink to={`/MBMEgroup`} className="submenu-link">
                           MBME Group
                         </NavLink>
                       </li>
                       <li>
-                        <NavLink
-                          to={`/partners/${item
-                            .toLowerCase()
-                            .replace(/\s+/g, "")}/partner3`}
-                          className="submenu-link"
-                        >
-                          Gulf data international
+                        <NavLink to={`/MBMEgroup`} className="submenu-link">
+                          Gulf Data International
                         </NavLink>
                       </li>
                     </ul>

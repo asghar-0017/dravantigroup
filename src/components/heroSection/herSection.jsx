@@ -73,7 +73,7 @@ const HeroSection = () => {
                 left: 0,
                 right: 0,
                 bottom: 0,
-                backgroundColor: "rgba(0, 0, 0, 0.8)",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
                 zIndex: 1,
               }}
             />
@@ -86,12 +86,13 @@ const HeroSection = () => {
           position: "absolute",
           bottom: "25%",
           right: "5%",
-          width: { xs: "90%", sm: "70%", md: "55%" },
-          backgroundColor: "rgba(0, 0, 0, 0.7)",
+          width: { xs: "90%", sm: "70%", md: "60%" },
+          backgroundColor: "rgba(0, 0, 0, 0.5)",
           color: "white",
           padding: 4,
           borderRadius: 2,
           cursor: "grab",
+          paddingLeft: "50px",
         }}
       >
         <Slider {...textSettings}>
@@ -102,7 +103,7 @@ const HeroSection = () => {
                 sx={{
                   fontWeight: "bold",
                   paddingBottom: 1,
-                  fontSize: { xs: "30px", sm: "35px", md: "45px" },
+                  fontSize: { xs: "30px", sm: "35px", md: "40px" },
                 }}
               >
                 {slide.text}

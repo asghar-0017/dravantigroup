@@ -56,7 +56,18 @@ const ContactSection = () => {
               </Typography>
               <Typography
                 variant="body2"
-                sx={{ color: "#DBE8E8", fontSize: 18 }}
+                component="a"
+                href="mailto:investments@dravantigroup.com"
+                onClick={() =>
+                  (window.location.href =
+                    "mailto:investments@dravantigroup.com")
+                }
+                sx={{
+                  color: "#DBE8E8",
+                  fontSize: 18,
+                  textDecoration: "none",
+                  cursor: "pointer",
+                }}
               >
                 investments@dravantigroup.com
               </Typography>
@@ -101,7 +112,18 @@ const ContactSection = () => {
               </Typography>
               <Typography
                 variant="body2"
-                sx={{ color: "#DBE8E8", fontSize: 18 }}
+                component="a"
+                href="mailto:partnerships@dravantigroup.com"
+                onClick={() =>
+                  (window.location.href =
+                    "mailto:partnerships@dravantigroup.com")
+                }
+                sx={{
+                  color: "#DBE8E8",
+                  fontSize: 18,
+                  textDecoration: "none",
+                  cursor: "pointer",
+                }}
               >
                 partnerships@dravantigroup.com
               </Typography>
@@ -146,7 +168,17 @@ const ContactSection = () => {
               </Typography>
               <Typography
                 variant="body2"
-                sx={{ color: "#DBE8E8", fontSize: 18 }}
+                component="a"
+                href="mailto:support@dravantigroup.com"
+                onClick={() =>
+                  (window.location.href = "mailto:support@dravantigroup.com")
+                }
+                sx={{
+                  color: "#DBE8E8",
+                  fontSize: 18,
+                  textDecoration: "none",
+                  cursor: "pointer",
+                }}
               >
                 support@dravantigroup.com
               </Typography>
