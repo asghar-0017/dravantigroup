@@ -84,7 +84,7 @@ const HeroSection = () => {
       <Box
         sx={{
           position: "absolute",
-          bottom: "25%",
+          bottom: "15%",
           right: "5%",
           width: { xs: "90%", sm: "70%", md: "60%" },
           backgroundColor: "rgba(0, 0, 0, 0.5)",
@@ -103,7 +103,7 @@ const HeroSection = () => {
                 sx={{
                   fontWeight: "bold",
                   paddingBottom: 1,
-                  fontSize: { xs: "30px", sm: "35px", md: "40px" },
+                  fontSize: { xs: "30px", sm: "35px", md: "45px" },
                 }}
               >
                 {slide.text}
