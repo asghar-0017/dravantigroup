@@ -1,16 +1,25 @@
 .navbar {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #253136;
-    color: white;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: top 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-visible {
+  top: 0;
+  background-color: rgba(37, 49, 54, 0.7); 
+}
+
+.navbar-hidden {
+  top: -100px; 
+  background-color: transparent;
+}
+
   
   .navbar-logo {
     display: flex;
@@ -137,6 +146,11 @@
     color: #ffff;
     cursor: pointer;
   }
+
+  .investor-login-btn:hover {
+    background-color: #81A89F;
+    transition: background-color 0.3s ease;
+  }
   
   .menu-toggle {
     display: none;
@@ -254,6 +268,8 @@
     .submenu-link{
         color: #f0f0f0 !important;
     }
-    
+    .navbar-logo {
+      width: 30% !important;
+    }
   }
   

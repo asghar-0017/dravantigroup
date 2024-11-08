@@ -8,6 +8,7 @@ import subBanner from '../../assets/images/subinterm.png'
 import CustomShape from '../../components/testIcons/icon'
 import InvestorRegistrationForm from '../../components/investorRegistration/investorRegistration'
 import {  Button, Box } from "@mui/material";
+import SubscribeForUpdates from '../../components/subscribeForUpdate/subscribeForUpdate'
 const InterMTraders = () => {
   return (
     // <div>
@@ -18,7 +19,7 @@ const InterMTraders = () => {
     //   </div>
     // </div>
     <>
-    <div className="main-container">
+    <div className="main-container" style={{paddingTop: "120px"}}>
         <h1 style={{marginTop:'20px'}}>Inter-M Traders FZ LLE</h1>
       <div className="header">
         <div style={{width:'100%'}}>
@@ -96,7 +97,7 @@ const InterMTraders = () => {
       
     </div>
     
-    <div><InvestorRegistrationForm/></div>
+    <div><SubscribeForUpdates /></div>
     
     </>
   );

@@ -1,14 +1,14 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { Container, Grid, Typography, TextField, Button, Box } from "@mui/material";
-import DravantiGold from "../../assets/images/dravanti-gold-logo.png"; 
-import DravantiGold2 from "../../assets/images/dravanti-gold-2.png"; 
+import DravantiGold from "../../assets/images/dravanti-gold-logo.png";
+import DravantiGold2 from "../../assets/images/dravanti-gold-2.png";
 
 const InvestorRegistrationForm = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data); 
+    console.log(data);
   };
 
   return (
@@ -93,6 +93,9 @@ const InvestorRegistrationForm = () => {
                 "& .MuiInputLabel-root": {
                   transform: "translate(14px, 14px) scale(1)",
                 },
+                "& .MuiInputLabel-shrink": {
+                  transform: "translate(14px, -10px) scale(0.75)", // Floating label behavior
+                },
               }}
             />
             <TextField
@@ -102,7 +105,7 @@ const InvestorRegistrationForm = () => {
               margin="normal"
               type="email"
               error={!!errors.email}
-              helperText={errors.email ? "This field is required. Please input a valid email " : ""}
+              helperText={errors.email ? "This field is required. Please input a valid email" : ""}
               {...register("email", { required: "Email is required" })}
               sx={{
                 "& .MuiOutlinedInput-root": {
@@ -117,6 +120,9 @@ const InvestorRegistrationForm = () => {
                 "& .MuiInputLabel-root": {
                   transform: "translate(14px, 14px) scale(1)",
                 },
+                "& .MuiInputLabel-shrink": {
+                  transform: "translate(14px, -10px) scale(0.75)", // Floating label behavior
+                },
               }}
             />
             <TextField
@@ -125,7 +131,7 @@ const InvestorRegistrationForm = () => {
               variant="outlined"
               margin="normal"
               error={!!errors.referralCode}
-              helperText={errors.referralCode ? "This field is required. Please a text" : ""}
+              helperText={errors.referralCode ? "This field is required. Please enter a text" : ""}
               {...register("referralCode", { required: "Referral code is required" })}
               sx={{
                 "& .MuiOutlinedInput-root": {
@@ -139,6 +145,9 @@ const InvestorRegistrationForm = () => {
                 },
                 "& .MuiInputLabel-root": {
                   transform: "translate(14px, 14px) scale(1)",
+                },
+                "& .MuiInputLabel-shrink": {
+                  transform: "translate(14px, -10px) scale(0.75)",
                 },
               }}
             />
