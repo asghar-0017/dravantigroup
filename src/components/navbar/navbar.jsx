@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { FaChevronDown, FaTimes } from "react-icons/fa";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 
@@ -8,6 +8,7 @@ import "../../assets/style/navbar.css";
 import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
+  const navigate = useNavigate()
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [expanded, setExpanded] = useState({});
   const [isVisible, setIsVisible] = useState(true);
@@ -56,6 +57,7 @@ const Navbar = () => {
       >
         <div className="navbar-logo" style={{ width: "20%" }}>
           <img
+          onClick={()=> navigate("/")}
             style={{ width: "100%" }}
             src={logo}
             alt="Dravanti Middle East Logo"

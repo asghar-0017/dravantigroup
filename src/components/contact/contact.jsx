@@ -30,6 +30,7 @@ const ContactSection = () => {
                 component="img"
                 src={Investment}
                 alt="Investment Icon"
+                loading="lazy"
                 sx={{
                   width: "100%",
                   maxWidth: "400px",
