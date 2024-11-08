@@ -2,7 +2,8 @@
 
 import React from 'react'
 import '../../assets/style/footer.css'
-import { useForm } from 'react-hook-form'; 
+import { useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom'; 
 
 import logo from '../../assets/images/logo.png'
 import letter from '../../assets/images/letter.png'
@@ -20,28 +21,34 @@ import { Container, Grid, Typography, TextField, Button, Box } from "@mui/materi
     <div class="footer-container container">
       <div class="footer-section" style={{width:'100%'}}>
         <img style={{width:'80%'}} src={logo}  alt="#"/>  
+        <p style={{paddingLeft:'15px'}}>Stay Updated With Our Latest Insights!</p>
         <TextField
               fullWidth
               label="Email"
               variant="outlined"
               margin="normal"
-              type="email"
-              error={!!errors.email}
-              helperText={errors.email ? "This field is required. Please input a valid email " : ""}
-              {...register("email", { required: "Email is required" })}
+              error={!!errors.referralCode}
+              helperText={errors.referralCode ? "This field is required. Please enter a text" : ""}
+              {...register("referralCode", { required: "Referral code is required" })}
               sx={{
                 "& .MuiOutlinedInput-root": {
                   borderTop: "none",
                   borderLeft: "none",
                   borderRight: "none",
                   borderBottom: "2px solid #ccc",
+                  color:'white'
                 },
                 "& .MuiOutlinedInput-notchedOutline": {
                   border: "none",
+                  
                 },
                 "& .MuiInputLabel-root": {
                   transform: "translate(14px, 14px) scale(1)",
-                  color: "white",
+                  color:'white'
+                },
+                "& .MuiInputLabel-shrink": {
+                  transform: "translate(14px, -10px) scale(0.75)",
+                 
                 },
               }}
             />
@@ -67,14 +74,14 @@ import { Container, Grid, Typography, TextField, Button, Box } from "@mui/materi
       <div class="footer-section subcat" >
         <h1>Home</h1>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Dravanti</a></li>
-          <li><a href="#">Governance</a></li>
-          <li><a href="#">Partners</a></li>
-          <li><a href="#">Team</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">News</a></li>
-        </ul>
+      <li><Link to="/">Home</Link></li>
+      <li><Link to="/about">Dravanti</Link></li>
+      <li><Link to="/">Governance</Link></li>
+      <li><Link to="/">Partners</Link></li>
+      <li><Link to="/team">Team</Link></li>
+      <li><Link to="/#contact">Contact</Link></li>
+      <li><Link to="/news">News</Link></li>
+    </ul>
       </div>
       <div class="footer-section">
         <h1>Visit Us</h1>
@@ -99,11 +106,10 @@ Unite Arab Emirates</li>
     <div class="footer-bottom">
       <div>&copy; All Rights Reserved. – Dravanti Middle East</div>
       <div className='footer-sub-bottom'>
-        <a href="#" target="_blank">Privacy Policy</a>
-        <a href="#" target="_blank">cookies Policy</a>
-        <a href="#" target="_blank">Terms and condition</a>
-
-      </div>
+      <Link to="/privacy-policy" target="_self">Privacy Policy</Link>
+      <Link to="/cookies-policy" target="_self">Cookies Policy</Link>
+      <Link to="/terms-and-conditions" target="_self">Terms and Conditions</Link>
+    </div>
     </div>
   </footer>
     </div>
