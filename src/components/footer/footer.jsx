@@ -2,6 +2,7 @@
 
 import React from 'react'
 import '../../assets/style/footer.css'
+import { useForm } from 'react-hook-form'; 
 
 import logo from '../../assets/images/logo.png'
 import letter from '../../assets/images/letter.png'
@@ -9,16 +10,61 @@ import linkedin from '../../assets/images/linkedin.png'
 import telegram from '../../assets/images/telegram.png'
 import twitter from '../../assets/images/twitter.png'
 
+import { Container, Grid, Typography, TextField, Button, Box } from "@mui/material";
+
  const Footer = () => {
+  const { register, handleSubmit, formState: { errors } } = useForm();
   return (
     <div style={{width:'100%'}}>
          <footer className="footer">
     <div class="footer-container container">
       <div class="footer-section" style={{width:'100%'}}>
         <img style={{width:'80%'}} src={logo}  alt="#"/>  
-        
+        <TextField
+              fullWidth
+              label="Email"
+              variant="outlined"
+              margin="normal"
+              type="email"
+              error={!!errors.email}
+              helperText={errors.email ? "This field is required. Please input a valid email " : ""}
+              {...register("email", { required: "Email is required" })}
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  borderTop: "none",
+                  borderLeft: "none",
+                  borderRight: "none",
+                  borderBottom: "2px solid #ccc",
+                },
+                "& .MuiOutlinedInput-notchedOutline": {
+                  border: "none",
+                },
+                "& .MuiInputLabel-root": {
+                  transform: "translate(14px, 14px) scale(1)",
+                  color: "white",
+                },
+              }}
+            />
+        <Box textAlign="left" mt={2}>
+              <Button
+                variant="contained"
+                type="submit"
+                sx={{
+                  backgroundColor: "black",
+                  color: "white",
+                  paddingX: 3,
+                  fontSize: "14px",
+                  "&:hover": {
+                    backgroundColor: "#333",
+                  },
+                }}
+                className="dmSans"
+              >
+                Send
+              </Button>
+            </Box>
             </div>
-      <div class="footer-section" >
+      <div class="footer-section subcat" >
         <h1>Home</h1>
         <ul>
           <li><a href="#">Home</a></li>

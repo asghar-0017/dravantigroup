@@ -2,6 +2,8 @@ import React from 'react'
 import '../../assets/style/interM.css'
 import ServiceCard from '../../components/serviceCard/servicecard'
 import banner from '../../assets/images/interM.webp'
+import icon1 from '../../assets/images/intericon.png'
+import icon2 from '../../assets/images/intericon1.png'
 import subBanner from '../../assets/images/subinterm.png'
 import CustomShape from '../../components/testIcons/icon'
 import InvestorRegistrationForm from '../../components/investorRegistration/investorRegistration'
@@ -37,12 +39,12 @@ const InterMTraders = () => {
       </div>
       <div className="services">
         <ServiceCard 
-          icon={<CustomShape/>}
+          icon={icon1}
           title="Advisory Services" 
           description="Providing solutions to complex business and financial problems."
         />
         <ServiceCard 
-          icon={<CustomShape/>}
+          icon={icon2}
           title="Investing Services" 
           description="Inter-M is a “strategic advisor” and “investor” in private equity transactions."
         />

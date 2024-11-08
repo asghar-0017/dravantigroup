@@ -56,10 +56,13 @@
     display: flex;
     justify-content: flex-start;
     gap: 20px;
-    align-items: center;
+    align-items: center !important;
 }
 .footer-icon  img{
     width: 40px;
+}
+.subcat{
+    padding-left: 30px;
 }
 
 @media (max-width: 600px) {
@@ -88,5 +91,13 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+    .footer-icon{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .subcat{
+        padding: 0px;
     }
 }
