@@ -1,12 +1,14 @@
 import React, { lazy } from "react";
-import DravantiToken from "../../components/dravantiToken/dravantiToken";
 import { TableSection } from "../../components/table/table";
-import InvestorRegistrationForm from "../../components/investorRegistration/investorRegistration";
-import Counter from "../../components/counter/counter";
-import DravantiLaunchAndScalability from "../../components/dravantiLaunchAndScalability/dravantiLaunchAndScalability";
+
+const HeroSection = lazy(() => import("../../components/heroSection/herSection"));
 const History = lazy(() => import("../../components/history/history"));
-import CorePartners from "../../components/corePartners/corePartners";
-import Contact from "../../components/contact/contact";
+const Contact = lazy(() => import("../../components/contact/contact"));
+const CorePartners = lazy(() => import("../../components/corePartners/corePartners"));
+const Counter = lazy(() => import("../../components/counter/counter"));
+const DravantiToken = lazy(() => import("../../components/dravantiToken/dravantiToken"));
+const InvestorRegistrationForm = lazy(() => import("../../components/investorRegistration/investorRegistration"));
+const DravantiLaunchAndScalability = lazy(() => import("../../components/dravantiLaunchAndScalability/dravantiLaunchAndScalability"));
 
 const Home = () => {
   const sampleContent = [
@@ -33,12 +35,13 @@ const Home = () => {
   ];
   return (
     <div>
+      <HeroSection />
       <History />
       <TableSection content={sampleContent} />
       <DravantiToken />
       <DravantiLaunchAndScalability />
       <InvestorRegistrationForm />
-      <Counter />
+      <Counter bg={"001E3C"}/>
       <CorePartners />
       <Contact />
     </div>

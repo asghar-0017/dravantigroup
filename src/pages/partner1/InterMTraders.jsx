@@ -2,10 +2,13 @@ import React from 'react'
 import '../../assets/style/interM.css'
 import ServiceCard from '../../components/serviceCard/servicecard'
 import banner from '../../assets/images/interM.webp'
+import icon1 from '../../assets/images/intericon.png'
+import icon2 from '../../assets/images/intericon1.png'
 import subBanner from '../../assets/images/subinterm.png'
 import CustomShape from '../../components/testIcons/icon'
 import InvestorRegistrationForm from '../../components/investorRegistration/investorRegistration'
 import {  Button, Box } from "@mui/material";
+import SubscribeForUpdates from '../../components/subscribeForUpdate/subscribeForUpdate'
 const InterMTraders = () => {
   return (
     // <div>
@@ -16,11 +19,11 @@ const InterMTraders = () => {
     //   </div>
     // </div>
     <>
-    <div className="main-container">
+    <div className="main-container" style={{paddingTop: "120px"}}>
         <h1 style={{marginTop:'20px'}}>Inter-M Traders FZ LLE</h1>
       <div className="header">
         <div style={{width:'100%'}}>
-            <h5 style={{textAlign:'left',marginTop:'30px'}}>Inter-M Traders FZ LLE is a “strategic  <br /> advisor” and “investor” in private equity <br /> transactions</h5>
+            <h3 style={{textAlign:'left',marginTop:'30px',fontSize:'25px',marginBottom:'1.5rem'}}>Inter-M Traders FZ LLE is a “strategic  advisor” and “investor” in private equity transactions</h3>
         <p>
           Inter-M Traders FZ LLE, and its affiliates is a Private Family Office, 
           with multi-billion US Dollars under management and syndication, 
@@ -37,12 +40,12 @@ const InterMTraders = () => {
       </div>
       <div className="services">
         <ServiceCard 
-          icon={<CustomShape/>}
+          icon={icon1}
           title="Advisory Services" 
           description="Providing solutions to complex business and financial problems."
         />
         <ServiceCard 
-          icon={<CustomShape/>}
+          icon={icon2}
           title="Investing Services" 
           description="Inter-M is a “strategic advisor” and “investor” in private equity transactions."
         />
@@ -66,9 +69,7 @@ const InterMTraders = () => {
             <img src={subBanner} style={{width:'100%'}} alt="" />
         </div>  
       </div>
-    </div>
-    <div><InvestorRegistrationForm/></div>
-    <div className='subDescription '><h4 className='container'>Everything we do is guided by a set of principles that define the firm’s character and culture; they have been at the core of Inter-M since its inception. These enduring qualities are the shared convictions that we as partners bring to our professional and personal conduct; they are a fundamental strength of our business.</h4>
+      <div className='subDescription '><h4 className=''>Everything we do is guided by a set of principles that define the firm’s character and culture; they have been at the core of Inter-M since its inception. These enduring qualities are the shared convictions that we as partners bring to our professional and personal conduct; they are a fundamental strength of our business.</h4>
     <Box textAlign="center" mt={4}>
   <a href="https://intermtraders.com/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
     <Button
@@ -93,6 +94,11 @@ const InterMTraders = () => {
 </Box>
 
     </div>
+      
+    </div>
+    
+    <div><SubscribeForUpdates /></div>
+    
     </>
   );
 }

@@ -14,10 +14,9 @@ const data = [
 const AnimatedNumber = ({ targetValue }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.5, // Trigger when 50% of the component is in view
+    threshold: 0.5, 
   });
 
-  // useSpring to animate the count from 0 to the target value
   const props = useSpring({
     from: { number: 0 },
     to: { number: inView ? targetValue : 0 },
@@ -56,17 +55,19 @@ const CircleItem = ({ value, label }) => (
   </Box>
 );
 
-const Counter = () => {
+const Counter = ({bg}) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
     <Box
       sx={{
-        backgroundColor: '#001E3C',
+        backgroundColor: `#${bg}`,
         py: 5,
         display: 'flex',
         justifyContent: 'center',
+        paddingTop: 10,
+        paddingBottom: 10
       }}
     >
       <Grid

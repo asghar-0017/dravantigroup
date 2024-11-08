@@ -7,6 +7,8 @@ import UniqueSellingPositions from './UniqueSellingPositions';
 import MBMEgroupMembers from './MBMEgroupMembers';
 import { Button, Box } from '@mui/material';
 import TrustedBy from './TrustedBy'
+import SubscribeForUpdates from '../../components/subscribeForUpdate/subscribeForUpdate';
+
 
 const data = [
   {
@@ -186,6 +188,7 @@ const MBMEgroup = () => {
   </Button>
   
       <TrustedBy/>
+      {/* <SubscribeForUpdates /> */}
       </Box>
     </>
   );

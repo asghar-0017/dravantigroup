@@ -2,6 +2,7 @@ import React, { lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
+
 const Home = lazy(() => import("../../pages/home/home"));
 const About = lazy(() => import("../../pages/about/about"));
 const Team = lazy(() => import("../../pages/team/team"));
@@ -10,6 +11,7 @@ const Navbar = lazy(() => import("../../components/navbar/navbar"));
 const Footer = lazy(() => import("../../components/footer/footer"));
 const InterMTraders = lazy(() => import("../../pages/partner1/InterMTraders"));
 const MBMEgroup =lazy(()=> import("../../pages/partner1/MBMEgroup"))
+const Privacy = lazy(() => import("../../pages/privacy/privacy"));
 
 const Router = () => {
   return (
@@ -31,6 +33,8 @@ const Router = () => {
           {/* sub1 Page */}
           <Route path="/interMTraders" element={<InterMTraders/>} />
           <Route path="/MBMEgroup" element={<MBMEgroup/>} />
+          {/* sub1 Page */}
+          <Route path="/privacy-policy" element={<Privacy/>} />
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -11,7 +11,8 @@ const History = () => {
         textAlign: "center",
         width: "75%",
         fontStyle: "italic",
-        lineHeight: "50px"
+        lineHeight: "50px",
+        marginTop: "50px"
       }}
     >
       Over the next 18 months Dravanti Middle East will scale to deliver one of
