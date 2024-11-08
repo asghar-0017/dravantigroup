@@ -9,7 +9,7 @@
 
 /* Header Section */
 .MBMEgroup-header h2 {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     text-align: center;
     margin-bottom: 50px;
     color: #222;
@@ -19,7 +19,7 @@
 .MBMEgroup-about {
     display: flex;
     align-items: center;
-    gap: 30px;
+    /* gap: 30px; */
     margin-bottom: 50px;
 }
 
@@ -45,13 +45,17 @@
 
 /* Ecosystem Section */
 .MBMEgroup-ecosystem h2 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     text-align: left;
     margin-bottom: 30px;
     color: #475355;
+    margin-left: 0.1rem;
+}
+.MBMEgroup-ecosystem  {
+    text-align: left;
+
 }
 
-/* Icons Grid */
 .MBMEgroup-icons {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -59,40 +63,43 @@
     margin-top: 20px;
 }
 
+.icon-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
 
 
 .icon {
-    font-size: 10px; /* Adjust the size as needed */
+    font-size: 1.5rem; /* Adjust the size as needed */
     color: #4B6F6B;
-    width: 20px; /* Fixed width */
-    height: 20px;
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-     margin-right: 15px;
+    margin-right: 10px;
 }
-
 .text-content {
     display: flex;
     flex-direction: column;
 }
 
 .title {
-    font-weight: bold;
+    font-weight: 400;
     font-size: 1.1rem;
-    margin-bottom: 5px;
-    color: #333;
+    color: #233032;
+    margin-top: 14px;
 }
 /* Styling for the paragraphs */
 .our-unique {
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.6;
     color: #333;
-    margin-bottom: 20px; /* Space between the paragraphs */
+    /* margin-bottom: 20px; Space between the paragraphs */
+}
+.description {
+    font-size: 0.95rem;
+    color: #475355;
+    line-height: 1.6;
 }
 .with-a-strong {
-    font-weight: 400;
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.6;
     color: #333;
 }
