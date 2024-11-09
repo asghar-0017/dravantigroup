@@ -1,7 +1,7 @@
 // ExpertiseSection.js
 import React from 'react';
 import { Typography, Box, Container, Grid } from '@mui/material';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import CheckCircle from '@mui/icons-material/CheckCircle';
 
 const ExpertiseSection = () => {
   return (
