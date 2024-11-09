@@ -1,5 +1,5 @@
 import React from "react";
-import optimization from "../../assets/images/Optimization.png";
+import optimization from "../../assets/images/optimization.png";
 import {
   Button,
   Box,
