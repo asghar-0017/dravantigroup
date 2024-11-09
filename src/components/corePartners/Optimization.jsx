@@ -1,5 +1,5 @@
 import React from "react";
-import optimization from "../../assets/images/Optimization.webp";
+import optimization from "../../assets/images/Optimization.png";
 import {
   Button,
   Box,
