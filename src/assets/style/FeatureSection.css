@@ -1,20 +1,23 @@
+/* Base styling */
 .containerss {
   display: flex;
-  justify-content: space-around; /* Distributes columns evenly */
-  align-items: flex-start; /* Aligns items to the top */
-  /* padding: 40px; Adds padding around the container */
-  text-align: left; /* Ensures all text aligns to the left */
-  background-color:#F9F9F9 !important;
+  flex-wrap: wrap; /* Allows wrapping of columns on smaller screens */
+  justify-content: space-around;
+  align-items: flex-start;
+  text-align: left;
+  background-color: #F9F9F9 !important;
+  padding: 20px;
 }
 
 .column {
   flex: 1;
-  /* max-width: 250px; */
-  padding: 0 10px; /* Adds horizontal padding between columns */
+  min-width: 250px;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
 h3 {
-  font-size: 30px; /* Adjusts font size for headings */
+  font-size: 24px;
   font-weight: 400;
   color: #465355;
   margin-bottom: 10px;
@@ -23,10 +26,9 @@ h3 {
 
 ul {
   list-style-type: disc;
-  /* padding-left: 20px; */
-  margin: 0; /* Removes default margin to control spacing */
- color: #465355; 
- padding: 15px;
+  margin: 0;
+  color: #465355;
+  padding: 15px;
 }
 
 li {
@@ -34,4 +36,46 @@ li {
   font-size: 16px;
   color: #555;
   line-height: 1.6;
+}
+
+/* Responsive styling */
+@media (max-width: 992px) {
+  .containerss {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .column {
+    width: 100%;
+    max-width: 600px; /* Optional: Set a max-width for readability on larger screens */
+    margin-bottom: 20px; /* Space between sections on smaller screens */
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  h3 {
+    font-size: 20px;
+  }
+
+  li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  h3 {
+    font-size: 18px;
+  }
+
+  li {
+    font-size: 12px;
+  }
 }

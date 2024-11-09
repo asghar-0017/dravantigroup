@@ -66,7 +66,7 @@ const TrustedBy = () => {
   ];
 
   return (
-    <Box sx={{ bgcolor: '#f9f9f9', py: 5 }}>
+    <Box sx={{ py: 5 }}>
       <Container maxWidth="md" sx={{ textAlign: 'left' }}>
         <Typography variant="h4" gutterBottom>Trusted by:</Typography>
         <Typography variant="body1" color="textSecondary" paragraph>

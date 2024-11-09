@@ -36,7 +36,7 @@ const CircleItem = ({ value, label }) => (
       width: { xs: 250, sm: 300, md: 300 },
       height: { xs: 250, sm: 300, md: 300 },
       borderRadius: '50%',
-      backgroundColor: 'transparent',
+      backgroundColor: '',
       border: '1px solid rgba(255, 255, 255, 0.2)',
       display: 'flex',
       flexDirection: 'column',
