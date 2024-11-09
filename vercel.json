@@ -1,8 +1,4 @@
 {
-    "builds": [
-      { "src": "src/index.js", "use": "@vercel/node" }
-    ],
-    "rewrites": [],
-    "redirects": []
+    "framework": "vite"
   }
   
