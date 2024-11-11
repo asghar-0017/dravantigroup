@@ -95,9 +95,11 @@
         flex-direction: column;
     }
     .footer-bottom{
+        width: 100%;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        text-align: center;
     }
     .footer-icon{
         flex-direction: row;
