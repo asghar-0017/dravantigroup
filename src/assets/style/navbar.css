@@ -1,5 +1,6 @@
 .navbar {
-  width: 100%;
+  width: 100% !important;
+  box-sizing: border-box;
   position: fixed;
   top: 0;
   z-index: 10;
@@ -12,11 +13,13 @@
 }
 
 .navbar-visible {
+  width: 100% !important;
   top: 0;
   background-color: rgba(37, 49, 54, 0.7);
 }
 
 .navbar-hidden {
+  width: 100% !important;
   top: -100px;
   background-color: transparent;
 }
@@ -32,6 +35,7 @@
 }
 
 .navbar-menu {
+  width: 100% !important;
   display: flex;
   gap: 20px;
   list-style: none;
@@ -181,6 +185,7 @@
 }
 
 .sidebar-header {
+  /* width: 100% !important; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -267,5 +272,8 @@
   }
   .navbar-logo {
     width: 30% !important;
+  }
+  .navbar{
+    width: 100% !important;
   }
 }
