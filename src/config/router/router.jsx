@@ -2,7 +2,6 @@ import React, { lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
-
 const Home = lazy(() => import("../../pages/home/home"));
 const About = lazy(() => import("../../pages/about/about"));
 const Team = lazy(() => import("../../pages/team/team"));
@@ -13,6 +12,8 @@ const InterMTraders = lazy(() => import("../../pages/partner1/InterMTraders"));
 const MBMEgroup =lazy(()=> import("../../pages/partner1/MBMEgroup"))
 const Privacy = lazy(() => import("../../pages/privacy/privacy"));
 const GulfInternational = lazy(() => import("../../pages/partner1/GulfInternational"));
+const Cookies = lazy(() => import("../../pages/cookies/Cookies"));
+const Terms = lazy(() => import("../../pages/Terms/Terms"));
 
 
 const Router = () => {
@@ -36,8 +37,10 @@ const Router = () => {
           <Route path="/interMTraders" element={<InterMTraders/>} />
           <Route path="/MBMEgroup" element={<MBMEgroup/>} />
           <Route path="/GulfInternational" element={<GulfInternational/>} />
-          {/* sub1 Page */}
+          {/* Footer Pages */}
           <Route path="/privacy-policy" element={<Privacy/>} />
+          <Route path="/cookies-policy" element={<Cookies/>} />
+          <Route path="/terms-and-conditions" element={<Terms/>} />
         </Routes>
         <Footer />
       </BrowserRouter>

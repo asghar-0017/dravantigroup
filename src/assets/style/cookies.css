@@ -1,16 +1,19 @@
-.privacy ul li{
+.privacy ul li {
     margin: 30px;
-    line-height: 2;
+    line-height: 1.5;
     font-size: 20px;
     color: #54595f;
 }
-.privacy p{
+.privacy p {
     font-size: 1.4rem;
     color: #54595f;
 }
-.privacy h2,h3,h4{
+.privacy  h1, h2, h3, h4 {
+    padding: 8px ;
     color: #54595f;
     text-align: left;
+    word-spacing: 3px !important;
+    font-weight: 800;
 }
 .privacy h1{
     color: #54595f;
