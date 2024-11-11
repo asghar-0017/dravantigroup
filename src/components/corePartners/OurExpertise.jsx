@@ -14,7 +14,7 @@ const ExpertiseSection = () => {
         <Grid container spacing={4}>
           <Grid item xs={12}>
             <Box display="flex" alignItems="flex-start">
-              <CheckCircleIcon sx={{ fontSize: 30, mr: 2 }} />
+              <CheckCircle sx={{ fontSize: 30, mr: 2 }} />
               <Box>
                 <Typography variant="h6" component="h3">
                   KYC Onboarding :
@@ -28,7 +28,7 @@ const ExpertiseSection = () => {
 
           <Grid item xs={12}>
             <Box display="flex" alignItems="flex-start">
-              <CheckCircleIcon sx={{ fontSize: 30, color: 'black', mr: 2 }} />
+              <CheckCircle sx={{ fontSize: 30, color: 'black', mr: 2 }} />
               <Box>
                 <Typography variant="h6" component="h3">
                   AML Services and Financial Solutions :

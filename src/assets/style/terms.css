@@ -18,7 +18,16 @@
 .privacy h1{
     color: #54595f;
     font-size: 4rem;
+    text-align: center !important;
 }
 .terms-list{
     line-height: .1;
 }
+.privacy{
+    width: 70%;
+}
+@media (max-width: 768px) {
+    .privacy{
+        width: 100%;
+    }
+    }

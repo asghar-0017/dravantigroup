@@ -9,7 +9,7 @@ const Cookies = () => {
         pageName="Cookie Policy"
         name="Cookie Policy"
       />
-      <div style={{ padding: '50px', width: '70%' }} className='container average privacy'>
+      <div style={{ padding: '50px' }} className='container average privacy'>
         <h1 style={{ textAlign: 'center' }}>Cookie Policy</h1>
         
         
@@ -25,10 +25,10 @@ const Cookies = () => {
           <li><strong>Purpose:</strong> These cookies are necessary for the Website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you, such as setting your privacy preferences, logging in, or filling in forms.</li>
           <li><strong>Information Collected:</strong> These cookies do not store any personally identifiable information.</li>
           <li><strong>Examples:</strong>
-            <ul>
+            
               <li>User authentication cookies that help ensure users can log in and access member-only areas.</li>
               <li>Cookies that remember your preferences regarding cookie usage.</li>
-            </ul>
+    
           </li>
         </ul>
 
@@ -37,10 +37,10 @@ const Cookies = () => {
           <li><strong>Purpose:</strong> These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our Website. They help us to know which pages are the most and least popular and see how visitors move around the site.</li>
           <li><strong>Information Collected:</strong> All information these cookies collect is aggregated and therefore anonymous.</li>
           <li><strong>Examples:</strong>
-            <ul>
+           
               <li>Analytics cookies used to track the number of visitors and how they use the site.</li>
               <li>Cookies used to understand the effectiveness of our marketing campaigns.</li>
-            </ul>
+         
           </li>
         </ul>
 
@@ -49,10 +49,10 @@ const Cookies = () => {
           <li><strong>Purpose:</strong> These cookies enable the Website to provide enhanced functionality and personalization. They may be set by us or by third-party providers whose services we have added to our pages.</li>
           <li><strong>Information Collected:</strong> These cookies may collect information that can identify you, but they do not track your browsing activity on other websites.</li>
           <li><strong>Examples:</strong>
-            <ul>
+           
               <li>Cookies that remember your settings and preferences, such as language or region.</li>
               <li>Cookies that provide you with services you have requested, such as watching a video or commenting on a blog.</li>
-            </ul>
+         
           </li>
         </ul>
 
@@ -61,10 +61,10 @@ const Cookies = () => {
           <li><strong>Purpose:</strong> These cookies may be set through our Website by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant adverts on other sites.</li>
           <li><strong>Information Collected:</strong> These cookies uniquely identify your browser and internet device.</li>
           <li><strong>Examples:</strong>
-            <ul>
+            
               <li>Cookies that track your browsing habits to show you more relevant advertisements.</li>
               <li>Cookies used to limit the number of times you see an advertisement.</li>
-            </ul>
+          
           </li>
         </ul>
 
@@ -73,10 +73,10 @@ const Cookies = () => {
           <li><strong>Purpose:</strong> These cookies are used when you share information using a social media sharing button or “like” button on our Website, or when you link your account or engage with our content on or through a social networking site such as Facebook, Twitter, or Google+.</li>
           <li><strong>Information Collected:</strong> These cookies may collect your IP address, the browser you are using, and track your interaction with our Website and social media accounts.</li>
           <li><strong>Examples:</strong>
-            <ul>
+            
               <li>Cookies that integrate social media features, such as the Facebook “Like” button.</li>
               <li>Cookies used to allow you to share content from our site on social media platforms.</li>
-            </ul>
+            
           </li>
         </ul>
 

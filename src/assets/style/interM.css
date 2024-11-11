@@ -12,18 +12,9 @@
   }
   
   .subDescription{
-<<<<<<< HEAD
-    font-family: "Average, Sans-serif";
-    font-weight: bold;
-    padding: 20px;
-    font-size: 1.3rem;
-    color: #92BCB3;
-    text-align: center;
-    background-color: #ffff;
-=======
     width: 100%;
     text-align: center;
-    color: #92BCB3;
+    color: #92BCB3 !important;
     font-family: "Average", Sans-serif;
     font-size: 19px;
     font-weight: 600;
@@ -31,7 +22,6 @@
     padding-top: 40px;
     padding-bottom: 40px;
     /* background-color: #ffff; */
->>>>>>> e9bcbcfdfcc61f1dbf1eba282be1453c1d799e6a
 
 }
   

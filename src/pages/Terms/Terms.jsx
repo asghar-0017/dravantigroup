@@ -9,7 +9,7 @@ const Terms = () => {
         pageName="Terms and Conditions"
         name="Terms and Conditions"
       />
-    <div style={{ padding: '50px', width: '70%' }} className='container average privacy'>
+    <div style={{ padding: '50px' }} className='container average privacy'>
       <h1 style={{textAlign:'center'}}><strong>Terms and Conditions</strong></h1>
       <h4 style={{paddingTop:'50px',paddingBottom:'20px'}}><strong>Terms and Conditions for Dravanti Middle East</strong></h4>
       <p>Last updated: July 09, 2024</p>

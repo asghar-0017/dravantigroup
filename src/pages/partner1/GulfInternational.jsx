@@ -16,7 +16,7 @@ const GulfInternational = () => {
     <>
       <Container
         maxWidth="md"
-        sx={{ paddingTop: "120px" }}>
+        sx={{ pt:25}}>
         <Typography
           variant="h3"
           component="h1"
@@ -50,7 +50,7 @@ const GulfInternational = () => {
 
           <Grid
             container
-            spacing={1}
+            spacing={2}
             alignItems="left">
             <Grid item xs={12} md={6}>
               <Typography

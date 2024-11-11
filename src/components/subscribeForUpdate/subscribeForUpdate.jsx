@@ -11,7 +11,7 @@ import {
 import DravantiGold from "../../assets/images/dravanti-gold-logo.png";
 import DravantiGold2 from "../../assets/images/logo2.webp";
 
-const SubscribeForUpdates = () => {
+const  SubscribeForUpdates = () => {
   const {
     register,
     handleSubmit,
@@ -37,7 +37,7 @@ const SubscribeForUpdates = () => {
     >
       <Grid
         container
-        spacing={4}
+        spacing={1}
         alignItems="center"
         justifyContent="center"
         sx={{ bgcolor: "#ffff", borderRadius: "20px", p: 3, width: "90%" }}

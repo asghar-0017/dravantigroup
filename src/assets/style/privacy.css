@@ -1,6 +1,6 @@
 .privacy ul li{
     margin: 30px;
-    line-height: 2;
+    line-height: 1.5;
     font-size: 20px;
     color: #54595f;
 }
@@ -9,6 +9,8 @@
     color: #54595f;
 }
 .privacy h2,h3,h4{
+    padding-top: 10px;
+    padding-bottom: 10px;
     color: #54595f;
     text-align: left;
 }
@@ -16,3 +18,11 @@
     color: #54595f;
     font-size: 4rem;
 }
+.privacy{
+    width: 70%;
+}
+@media (max-width: 768px) {
+    .privacy{
+        width: 100%;
+    }
+    }
