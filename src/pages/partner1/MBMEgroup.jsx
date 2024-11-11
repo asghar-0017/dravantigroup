@@ -156,12 +156,15 @@ const MBMEgroup = () => {
               our diverse ventures.
             </p>
           </div>
+          
           <img
             src={MBMEgroupImage}
             alt="MBME Group Logo"
           />
         </div>
-
+        <div style={{fontSize:'1.2rem', color:'#475355'}}>
+            <p>As a leader in the fintech landscape, MBME Group integrates four vibrant verticals into a cohesive and groundbreaking ecosystem:</p>
+            </div>
         <div className="MBMEgroup-icons">
           {data.map((item, index) => (
             <div
@@ -183,7 +186,7 @@ const MBMEgroup = () => {
         </div>
       </div>
 
-      <div className="texts">
+      <div className="texts ">
         <div className="our-unique container">
           <p>
             Our unique, integrated ecosystem
@@ -210,39 +213,45 @@ const MBMEgroup = () => {
             and finance.
           </p>
         </div>
-      </div>
+      
+    <TerritoriesCovered />
 
-      <TerritoriesCovered />
       <UniqueSellingPositions
         title="Unique Selling Proposition"
         subtitle="Explore why MBME Group stands out in the market:"
         points={pointsData}
       />
-      <MBMEgroupMembers />
-      <UniqueSellingPositions
-        title="MBME Pay"
-        subtitle="MBME Group has proven expertise, exceptional performance, and a track record of excellence in the digital and technology sectors."
-        points={MBMEDATA}
-      />
+   <MBMEgroupMembers />
+<UniqueSellingPositions
+className='container'
+  title="MBME Pay"
+  subtitle="MBME Group has proven expertise, exceptional performance, and a track record of excellence in the digital and technology sectors. MBME Pay, a subsidiary of MBME Group, is the largest payment services provider, bill aggregator, software developer, and kiosk manufacturer in the UAE. Established in 2007, MBME Pay simplifies, expedites, and secures electronic payments through integrated omni-channel technology platforms. Services include bill payment, e-wallet top-ups, fine payments, charity donations, voucher purchases, and numerous smart services. MBME Pay’s local expertise ensures solutions tailored to regional needs, prompt resource mobilization, efficient software implementation, and seamless administrative procedures. Dedicated support and maintenance, along with swift problem-solving, make MBME Pay a reliable partner in the UAE’s payment services industry."
+  points={MBMEDATA}
+/>
+
 
       <Box
+      className='container'
         sx={{
           textAlign: "center",
+          justifyContent:'center',
+          display:'flex',
+          alignItems:'center',
           mt: 4,
         }}>
         <Button
           sx={{
             backgroundColor: "black",
             color: "white",
-            padding: "10px 45px",
+            padding: "10px 30px",
             borderRadius: "20px",
-            fontSize: "16px",
+            fontSize: "14px",
             "&:hover": {
               backgroundColor: "#B62175", // Hover color turns pink
               transform: "translateY(-5px)", // Slightly raises the button on hover
             },
             "@media (max-width:600px)": {
-              padding: "12px 45px", // Adjust button size on smaller screens
+              padding: "12px 35px", // Adjust button size on smaller screens
               fontSize: "14px",
             },
           }}>
@@ -250,8 +259,10 @@ const MBMEgroup = () => {
         </Button>
       </Box>
 
+      </div>
       <TrustedBy />
       <SubscribeForUpdates />
+
     </>
   );
 };

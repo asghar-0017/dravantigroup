@@ -16,7 +16,6 @@ import slider8 from '../../assets/images/slider8.webp';
 import slider9 from '../../assets/images/slider9.webp';
 import slider10 from '../../assets/images/slider10.webp';
 
-
 const TrustedBy = () => {
   const settings = {
     dots: false,
@@ -28,21 +27,21 @@ const TrustedBy = () => {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1024, // Tablet size
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 600, // Mobile size
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 480, // Small mobile size
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -66,10 +65,12 @@ const TrustedBy = () => {
   ];
 
   return (
-    <Box sx={{ py: 5 }}>
-      <Container maxWidth="md" sx={{ textAlign: 'left' }}>
-        <Typography variant="h4" gutterBottom>Trusted by:</Typography>
-        <Typography variant="body1" color="textSecondary" paragraph>
+    <Box sx={{ py: { xs: 3, sm: 5 } }}>
+      <Container maxWidth="md" sx={{ textAlign: { xs: 'left', sm: 'left' }, px: { xs: 2, sm: 0 } }}>
+        <Typography variant="h4" gutterBottom>
+          Trusted by:
+        </Typography>
+        <Typography variant="body1" color="textSecondary" paragraph sx={{ maxWidth: '600px' }}>
           MBME Group’s diverse portfolio encompasses various entities across different regional sectors. Leveraging our advanced technology and extensive resources, we provide our clients and partners with a multitude of innovative and unique possibilities. We highly value the trust placed in us by our clients and take pride in delivering exceptional, high-quality services and products that are meticulously tailored to meet individual needs.
         </Typography>
       </Container>
@@ -81,10 +82,10 @@ const TrustedBy = () => {
               key={index} 
               sx={{ 
                 display: 'flex', 
-                justifyContent: 'center', 
-                alignItems: 'center',
+                justifyContent: 'left', 
+                alignItems: 'left',
                 p: 2,
-                position: 'relative'
+                position: 'relative',
               }}
             >
               {/* Left line for all items except the first */}
@@ -101,7 +102,16 @@ const TrustedBy = () => {
                 />
               )}
 
-              <img src={logo} alt={`Client Logo ${index + 1}`} style={{ maxWidth: '100px', height: 'auto' }} />
+              <img 
+                src={logo} 
+                alt={`Client Logo ${index + 1}`} 
+                style={{
+                  maxWidth: '100px', 
+                  height: 'auto', 
+                  objectFit: 'contain', 
+                  margin: '0 auto',
+                }} 
+              />
 
               {/* Right line for all items except the last */}
               {index < logos.length - 1 && (
@@ -112,7 +122,7 @@ const TrustedBy = () => {
                     position: 'absolute', 
                     right: 0, 
                     height: '100%', 
-                    borderColor: 'black' 
+                    borderColor: 'rgba(0, 0, 0, 0.1)' 
                   }}
                 />
               )}
