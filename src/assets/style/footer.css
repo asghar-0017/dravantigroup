@@ -34,11 +34,13 @@
     margin: 10px 0;
 }
 .footer-section ul li a {
+    font-size: 1.2rem;
     color: #868F91;
     text-decoration: none;
 }
 .footer-section ul li a:hover {
     text-decoration: underline;
+    color: #FFFF;
 }
 .footer-bottom {
     width: 100%;
