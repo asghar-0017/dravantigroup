@@ -86,8 +86,8 @@ const HeroSection = () => {
           // right: "5%",
           // width: { xs: "90%", sm: "70%", md: "60%" },
           bottom: { xs: "5%", sm: "20%", md: "4%", lg: "4%" },
-          right: { xs: "5%", sm: "7%", md: "10%", lg: "10%" },
-          width: { xs: "90%", sm: "70%", md: "80%", lg: "60%" },
+          right: { xs: "5%", sm: "7%", md: "10%", lg: "5%" },
+          width: { xs: "90%", sm: "70%", md: "80%", lg: "70%" },
           backgroundColor: "rgba(0, 0, 0, 0.5)",
           color: "white",
           padding: 4,
@@ -100,7 +100,7 @@ const HeroSection = () => {
             lg: "27vw"
         },
         paddingTop: "60px",
-        paddingLeft: { xs: "10px", sm: "20px", md: "60px", lg: "60px" },
+        paddingLeft: { xs: "10px", sm: "20px", md: "60px", lg: "120px" },
         }}
       >
         <Slider {...textSettings}>
@@ -113,7 +113,7 @@ const HeroSection = () => {
                   paddingBottom: 1,
                   fontSize: { xs: "30px", sm: "35px", md: "45px" },
                   fontWeight: "light",
-                  lineHeight: { xs: "30px", sm: "35px", md: "63px" },
+                  lineHeight: { xs: "30px", sm: "35px", md: "55px" },
                   width: { xs: "100%", sm: "100%", md: "80%", lg: "80%" },
                 }}
                 className="exo"
@@ -125,8 +125,8 @@ const HeroSection = () => {
                 sx={{
                   fontWeight: "bold",
                   fontSize: { xs: "20px", sm: "25px", md: "45px" },
-                  fontWeight: 700,
-                  lineHeight: { xs: "30px", sm: "35px", md: "63px" },
+                  fontWeight: 600,
+                  lineHeight: { xs: "30px", sm: "35px", md: "50px" },
                   width: { xs: "100%", sm: "100%", md: "80%", lg: "80%" },
                 }}
                 className="exo"
