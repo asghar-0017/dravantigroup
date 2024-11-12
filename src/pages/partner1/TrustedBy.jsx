@@ -23,7 +23,7 @@ const TrustedBy = () => {
     autoplay: true,
     autoplaySpeed: 2000,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 6,
     slidesToScroll: 1,
     responsive: [
       {
@@ -65,32 +65,35 @@ const TrustedBy = () => {
   ];
 
   return (
-    <Box sx={{ py: { xs: 3, sm: 5 } }}>
+    <Box sx={{ py: { xs: 3, sm: 5 }}}>
       <Container maxWidth="md" sx={{ textAlign: { xs: 'left', sm: 'left' }, px: { xs: 2, sm: 0 } }}>
-        <Typography variant="h4" gutterBottom>
+        <Typography variant="h4" gutterBottom className='dmsans' fontSize={'30px'} marginBottom={'2rem'}>
           Trusted by:
         </Typography>
-        <Typography variant="body1" color="textSecondary" paragraph sx={{ maxWidth: '600px' }}>
+        <Typography variant="body1" color="textSecondary" paragraph sx={{ maxWidth: '980px' }} className='average' fontSize={'15px'}> 
           MBME Group’s diverse portfolio encompasses various entities across different regional sectors. Leveraging our advanced technology and extensive resources, we provide our clients and partners with a multitude of innovative and unique possibilities. We highly value the trust placed in us by our clients and take pride in delivering exceptional, high-quality services and products that are meticulously tailored to meet individual needs.
         </Typography>
       </Container>
 
-      <Container maxWidth="lg">
+      <Container maxWidth="10%" className='container'>
         <Slider {...settings}>
           {logos.map((logo, index) => (
             <Box 
               key={index} 
               sx={{ 
-                display: 'flex', 
-                justifyContent: 'left', 
-                alignItems: 'left',
-                p: 2,
+                className:'container',
+                // display: 'flex', 
+                // justifyContent: 'left', 
+                // alignItems: 'left',
+                p: 4,
                 position: 'relative',
+
               }}
             >
               {/* Left line for all items except the first */}
               {index > 0 && (
-                <Divider 
+                <Divider
+                className='container'
                   orientation="vertical" 
                   flexItem 
                   sx={{ 
@@ -119,6 +122,7 @@ const TrustedBy = () => {
                   orientation="vertical" 
                   flexItem 
                   sx={{ 
+                    
                     position: 'absolute', 
                     right: 0, 
                     height: '100%', 

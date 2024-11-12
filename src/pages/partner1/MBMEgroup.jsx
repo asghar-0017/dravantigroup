@@ -162,7 +162,7 @@ const MBMEgroup = () => {
             alt="MBME Group Logo"
           />
         </div>
-        <div style={{fontSize:'1.2rem', color:'#475355'}}>
+        <div style={{fontSize:'1.21rem', color:'#475355'}}>
             <p>As a leader in the fintech landscape, MBME Group integrates four vibrant verticals into a cohesive and groundbreaking ecosystem:</p>
             </div>
         <div className="MBMEgroup-icons">
@@ -170,7 +170,7 @@ const MBMEgroup = () => {
             <div
               className="MBMEgroup-icon-box"
               key={index}>
-              <span className="icon-title">
+              <span className="icon-title roboto">
                 <span>
                   <FaRegCheckCircle className="icon" />
                 </span>
@@ -186,8 +186,8 @@ const MBMEgroup = () => {
         </div>
       </div>
 
-      <div className="texts ">
-        <div className="our-unique container">
+      <div className="texts average ">
+        <div className="our-unique ">
           <p>
             Our unique, integrated ecosystem
             empowers us to deliver cutting-edge
@@ -200,7 +200,7 @@ const MBMEgroup = () => {
           </p>
         </div>
 
-        <div className="with-a-strong container">
+        <div className="with-a-strong ">
           <p>
             With a strong market presence and an
             unyielding dedication to innovation,
@@ -222,6 +222,7 @@ const MBMEgroup = () => {
         points={pointsData}
       />
    <MBMEgroupMembers />
+
 <UniqueSellingPositions
 className='container'
   title="MBME Pay"
@@ -230,34 +231,40 @@ className='container'
 />
 
 
-      <Box
-      className='container'
-        sx={{
-          textAlign: "center",
-          justifyContent:'center',
-          display:'flex',
-          alignItems:'center',
-          mt: 4,
-        }}>
-        <Button
-          sx={{
-            backgroundColor: "black",
-            color: "white",
-            padding: "10px 30px",
-            borderRadius: "20px",
-            fontSize: "14px",
-            "&:hover": {
-              backgroundColor: "#B62175", // Hover color turns pink
-              transform: "translateY(-5px)", // Slightly raises the button on hover
-            },
-            "@media (max-width:600px)": {
-              padding: "12px 35px", // Adjust button size on smaller screens
-              fontSize: "14px",
-            },
-          }}>
-          Our Website
-        </Button>
-      </Box>
+<Box
+  className='container'
+  sx={{
+    textAlign: "center",
+    justifyContent: 'center',
+    display: 'flex',
+    alignItems: 'center',
+    mt: 4,
+    paddingRight: { xs: '', sm: '10rem' }, // Responsive padding
+  }}
+>
+  <Button
+    sx={{
+      backgroundColor: "black",
+      color: "white",
+      padding: "10px 30px",
+      borderRadius: "20px",
+      fontSize: "14px",
+      transition: "transform 0.3s ease, box-shadow 0.3s ease", // Smooth transition
+      "&:hover": {
+        backgroundColor: "#B62175", // Hover color turns pink
+        transform: "translateY(-2px) scale(1.05)", // Slightly raises and scales the button
+        // boxShadow: "0px 10px 25px rgba(182, 33, 117, 0.5)", // Larger shadow on hover
+      },
+      "@media (max-width:600px)": {
+        padding: "12px 35px", // Adjust button size on smaller screens
+        fontSize: "14px",
+      },
+    }}
+  >
+    Our Website
+  </Button>
+</Box>
+
 
       </div>
       <TrustedBy />
