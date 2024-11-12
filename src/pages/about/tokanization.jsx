@@ -49,7 +49,6 @@ const Tokanization = () => {
             </div>
           </div>
           &nbsp;
-
           <div className="timeline-item">
             <FaRegCheckCircle fontSize={30} color='#4B6F6B' />
             <div className="timeline-content">
