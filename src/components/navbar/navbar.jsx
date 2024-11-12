@@ -12,6 +12,7 @@ const Navbar = () => {
   const [expanded, setExpanded] = useState({});
   const [isVisible, setIsVisible] = useState(true);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [isScrolledUp, setIsScrolledUp] = useState(false);
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
@@ -36,11 +37,15 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
+
       if (currentScrollPos < scrollPosition || currentScrollPos < 10) {
         setIsVisible(true);
+        setIsScrolledUp(currentScrollPos > 10);
       } else {
         setIsVisible(false);
+        setIsScrolledUp(false);
       }
+
       setScrollPosition(currentScrollPos);
     };
 
@@ -49,13 +54,16 @@ const Navbar = () => {
   }, [scrollPosition]);
 
   const handleNavClick = () => {
-    // Close the sidebar when a navbar item is clicked
     setIsSidebarOpen(false);
   };
 
   return (
     <>
-      <div className={`navbar ${isVisible ? "navbar-visible" : "navbar-hidden"}`}>
+      <div
+        className={`navbar ${isVisible ? "navbar-visible" : "navbar-hidden"} ${
+          isScrolledUp ? "navbar-scrolled-up" : ""
+        }`}
+      >
         <div className="navbar-logo" style={{ width: "20%" }}>
           <img
             onClick={() => navigate("/")}
@@ -129,7 +137,7 @@ const Navbar = () => {
                 Team
               </NavLink>
             </li>
-            <li>
+            <li className="contct">
               <HashLink
                 to="/#contact"
                 smooth

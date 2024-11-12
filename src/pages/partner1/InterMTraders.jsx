@@ -21,10 +21,10 @@ const InterMTraders = () => {
     <>
     <div className="main-container" style={{paddingTop: "120px"}}>
         <h1 style={{marginTop:'20px'}}>Inter-M Traders FZ LLE</h1>
-      <div className="header">
+      <div className="header average">
         <div style={{width:'90%'}}>
             <h3 style={{textAlign:'left',marginTop:'30px',fontSize:'25px',marginBottom:'1.5rem'}}>Inter-M Traders FZ LLE is a “strategic  advisor” and “investor” in private equity transactions</h3>
-        <p>
+        <p style={{fontSize:'15px',lineHeight:'20px',wordSpacing:'7px'}}>
           Inter-M Traders FZ LLE, and its affiliates is a Private Family Office, 
           with multi-billion US Dollars under management and syndication, 
           with over 20 years’ experience in the financial sector, and more than 
@@ -38,7 +38,7 @@ const InterMTraders = () => {
         </div>
         
       </div>
-      <div className="services">
+      <div className="services average">
         <ServiceCard 
           icon={icon1}
           title="Advisory Services" 
@@ -50,7 +50,7 @@ const InterMTraders = () => {
           description="Inter-M is a “strategic advisor” and “investor” in private equity transactions."
         />
       </div>
-      <div className="header" style={{marginTop:'30px'}}>
+      <div className="header average" style={{marginTop:'30px'}}>
         <div style={{width:'90%'}}>
             <h2 style={{textAlign:'left',marginTop:'30px'}}>Philosophy</h2>
         <p>
@@ -69,8 +69,8 @@ const InterMTraders = () => {
             <img src={subBanner} style={{width:'100%'}} alt="" />
         </div>  
       </div>
-      <div className='subDescription'><h4 className=''>Everything we do is guided by a set of principles that define the firm’s character and culture; they have been at the core of Inter-M since its inception. These enduring qualities are the shared convictions that we as partners bring to our professional and personal conduct; they are a fundamental strength of our business.</h4>
-    <Box textAlign="center" mt={4}>
+      <div className='subDescription average'><h4 className='average'>Everything we do is guided by a set of principles that define the firm’s character and culture; they have been at the core of Inter-M since its inception. These enduring qualities are the shared convictions that we as partners bring to our professional and personal conduct; they are a fundamental strength of our business.</h4>
+    <Box textAlign="center" mt={4} pb={3}>
   <a href="https://intermtraders.com/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
     <Button
       variant="contained"
@@ -81,7 +81,7 @@ const InterMTraders = () => {
         paddingX: 3,
         paddingY: 1.5,
         fontSize: "14px",
-        borderRadius: '20px',
+        borderRadius: '30px',
         "&:hover": {
           backgroundColor: "#333",
         },
