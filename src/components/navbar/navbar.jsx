@@ -3,6 +3,8 @@ import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { FaChevronDown, FaTimes } from "react-icons/fa";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 import logo from "../../assets/images/logo.png";
+import logo2 from "../../assets/images/subLogo.webp";
+import logoMobile from "../../assets/images/mobilelogo.png";
 import "../../assets/style/navbar.css";
 import { HashLink } from "react-router-hash-link";
 
@@ -13,6 +15,7 @@ const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isScrolledUp, setIsScrolledUp] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
@@ -24,6 +27,17 @@ const Navbar = () => {
   };
 
   const location = useLocation();
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     if (location.hash === "#contact" && location.pathname === "/") {
@@ -61,16 +75,25 @@ const Navbar = () => {
     <>
       <div
         className={`navbar ${isVisible ? "navbar-visible" : "navbar-hidden"} ${
-          isScrolledUp ? "navbar-scrolled-up" : ""
+          isScrolledUp ? "navbar-scrolled-up" : isMobile ?  "navbar-scrolled-up" : ""
         }`}
       >
         <div className="navbar-logo" style={{ width: "20%" }}>
-          <img
-            onClick={() => navigate("/")}
-            style={{ width: "100%" }}
-            src={logo}
-            alt="Dravanti Middle East Logo"
-          />
+          {!isMobile ? (
+            <img
+              onClick={() => navigate("/")}
+              style={{ width: "100%" }}
+              src={!isScrolledUp ? logo : logo2}
+              alt="Dravanti Middle East Logo"
+            />
+          ) : (
+            <img
+              onClick={() => navigate("/")}
+              style={{ width: "30%" }}
+              src={logoMobile}
+              alt="Dravanti Middle East Logo"
+            />
+          )}
         </div>
         <div style={{ width: "50%" }}>
           <ul className="navbar-menu">
@@ -177,80 +200,77 @@ const Navbar = () => {
           </button>
         </div>
         <ul className="sidebar-menu">
-          {[
-            "Home",
-            "Dravanti",
-            "Partners",
-            "Team",
-            "Contact Us",
-            "News",
-          ].map((item, index) => (
-            <li key={index} className="menu-item">
-              <div
-                className="menu-title"
-                onClick={() => toggleDropdown(item)}
-              >
-                <NavLink
-                  to={
-                    item === "Home"
-                      ? "/"
-                      : item === "Dravanti"
-                      ? "/about"
-                      : item === "Contact Us"
-                      ? "/#contact"
-                      : `/${item.toLowerCase().replace(/\s+/g, "")}`
-                  }
-                  className={({ isActive }) => (isActive ? "active-link" : "")}
-                  onClick={handleNavClick}
+          {["Home", "Dravanti", "Partners", "Team", "Contact Us", "News"].map(
+            (item, index) => (
+              <li key={index} className="menu-item">
+                <div
+                  className="menu-title"
+                  onClick={() => toggleDropdown(item)}
                 >
-                  {item}
-                </NavLink>
-                {item !== "Contact Us" &&
+                  <NavLink
+                    to={
+                      item === "Home"
+                        ? "/"
+                        : item === "Dravanti"
+                        ? "/about"
+                        : item === "Contact Us"
+                        ? "/#contact"
+                        : `/${item.toLowerCase().replace(/\s+/g, "")}`
+                    }
+                    className={({ isActive }) =>
+                      isActive ? "active-link" : ""
+                    }
+                    onClick={handleNavClick}
+                  >
+                    {item}
+                  </NavLink>
+                  {item !== "Contact Us" &&
+                    item !== "Home" &&
+                    item !== "Dravanti" &&
+                    item !== "Team" &&
+                    item !== "News" && (
+                      <FaChevronDown className="dropdown-icon" />
+                    )}
+                </div>
+                {expanded[item] &&
+                  item !== "Contact Us" &&
                   item !== "Home" &&
                   item !== "Dravanti" &&
                   item !== "Team" &&
                   item !== "News" && (
-                    <FaChevronDown className="dropdown-icon" />
+                    <ul className="submenu">
+                      <li>
+                        <NavLink
+                          to={`/interMTraders`}
+                          className="submenu-link"
+                          onClick={handleNavClick}
+                        >
+                          Inter-M Traders FZ LLC
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          to={`/MBMEgroup`}
+                          className="submenu-link"
+                          onClick={handleNavClick}
+                        >
+                          MBME Group
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          to={`/GulfInternational`}
+                          className="submenu-link"
+                          onClick={handleNavClick}
+                        >
+                          Gulf Data International
+                        </NavLink>
+                      </li>
+                    </ul>
                   )}
-              </div>
-              {expanded[item] &&
-                item !== "Contact Us" &&
-                item !== "Home" &&
-                item !== "Dravanti" &&
-                item !== "Team" &&
-                item !== "News" && (
-                  <ul className="submenu">
-                    <li>
-                      <NavLink
-                        to={`/interMTraders`}
-                        className="submenu-link"
-                        onClick={handleNavClick}
-                      >
-                        Inter-M Traders FZ LLC
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        to={`/MBMEgroup`}
-                        className="submenu-link"
-                        onClick={handleNavClick}
-                      >
-                        MBME Group
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        to={`/GulfInternational`}
-                        className="submenu-link"
-                        onClick={handleNavClick}
-                      >
-                        Gulf Data International
-                      </NavLink>
-                    </li>
-                  </ul>
-                )}
-            </li>
-          ))}
+              </li>
+            )
+          )}
         </ul>
         <div className="contact-info">
           <h3>Contact Info</h3>
@@ -260,8 +280,8 @@ const Navbar = () => {
               color: "#828c8f",
             }}
           >
-            Dravanti Middle East Floor 11-47, Uptown Tower Dubai Multi Commodities
-            Centre Unite Arab Emirates
+            Dravanti Middle East Floor 11-47, Uptown Tower Dubai Multi
+            Commodities Centre Unite Arab Emirates
             <br />
             <a
               style={{

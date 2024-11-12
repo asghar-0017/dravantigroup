@@ -32,7 +32,6 @@ const AnimatedNumber = ({ targetValue }) => {
 
 const CircleItem = ({ value, label }) => (
   <Box
-  className='hover-target'
     sx={{
       width: { xs: 250, sm: 300, md: 300 },
       height: { xs: 250, sm: 300, md: 300 },
@@ -85,6 +84,7 @@ const Counter = ({ bg }) => {
         paddingTop: 10,
         paddingBottom: 10,
       }}
+      className='hover-target'
     >
       <Grid container spacing={2} justifyContent="center" alignItems="center">
         {data.map((item, index) => (
