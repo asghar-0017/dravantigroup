@@ -30,7 +30,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 1024);
+      setIsMobile(window.innerWidth <= 1024);
     };
 
     handleResize();
@@ -89,7 +89,7 @@ const Navbar = () => {
           ) : (
             <img
               onClick={() => navigate("/")}
-              style={{ width: "30%" }}
+              style={{ width: "28%" }}
               src={logoMobile}
               alt="Dravanti Middle East Logo"
             />
