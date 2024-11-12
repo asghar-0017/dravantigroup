@@ -4,13 +4,14 @@ import { gsap } from 'gsap';
 export const Cursor = () => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [isMobile, setIsMobile] = useState(false);
+  const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
 
-    handleResize(); 
+    handleResize();
     window.addEventListener('resize', handleResize);
 
     return () => {
@@ -21,8 +22,8 @@ export const Cursor = () => {
   useEffect(() => {
     const handleMouseMove = (event) => {
       setCursorPosition({
-        x: event.clientX, 
-        y: event.clientY 
+        x: event.clientX,
+        y: event.clientY
       });
     };
 
@@ -42,12 +43,49 @@ export const Cursor = () => {
     });
   }, [cursorPosition]);
 
+  useEffect(() => {
+    const handleMouseEnter = () => setIsHovering(true);
+    const handleMouseLeave = () => setIsHovering(false);
+
+    const hoverElements = document.querySelectorAll('button, input, .hover-target');
+    hoverElements.forEach((element) => {
+      element.addEventListener('mouseenter', handleMouseEnter);
+      element.addEventListener('mouseleave', handleMouseLeave);
+    });
+
+    return () => {
+      hoverElements.forEach((element) => {
+        element.removeEventListener('mouseenter', handleMouseEnter);
+        element.removeEventListener('mouseleave', handleMouseLeave);
+      });
+    };
+  }, []);
+  
+
+  useEffect(() => {
+    if (isHovering) {
+      gsap.to('.cursor', {
+        scale: 3, 
+        opacity: 0, 
+        duration: 0.3,
+        ease: 'power4.out'
+      });
+    } else {
+      gsap.to('.cursor', {
+        scale: 1, 
+        opacity: 1, 
+        duration: 0.3,
+        ease: 'power4.out'
+      });
+    }
+  }, [isHovering]);
+
   return (
     !isMobile && (
       <div
         className="cursor"
         style={{
-          position: 'fixed', 
+          position: 'fixed',
           width: '30px',
           height: '30px',
           borderRadius: '50%',

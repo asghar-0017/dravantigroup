@@ -5,12 +5,17 @@
 
 @font-face {
   font-family: "DMSans";
-  src: url("./assets/fonts/DM_Sans/DMSans-Italic-VariableFont_opsz\,wght.ttf") format("woff2"),
+  src: url("./assets/fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf") format("woff2"),
 }
 
 @font-face {
   font-family: "Roboto";
   src: url("./assets/fonts/Roboto/Roboto-Medium.ttf") format("woff2"),
+}
+
+@font-face {
+  font-family: "Exo";
+  src: url("./assets/fonts/Exo/Exo-VariableFont_wght.ttf") format("woff2"),
 }
 
 *{
@@ -34,4 +39,8 @@ html, body{
 
 .roboto{
   font-family: Roboto, sans-serif !important;
+}
+
+.exo{
+  font-family: Exo, sans-serif !important;
 }

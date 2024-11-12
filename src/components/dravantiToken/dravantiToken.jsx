@@ -4,7 +4,7 @@ import DravantiTokenImg from "../../assets/images/dravanti-token.png";
 import { useNavigate } from "react-router-dom";
 
 const DravantiToken = () => {
-    let navigate = useNavigate()
+  let navigate = useNavigate();
   return (
     <Box
       sx={{
@@ -12,9 +12,9 @@ const DravantiToken = () => {
         width: "100%",
         overflow: "hidden",
         minHeight: {
-            md:"550px",
-            sm: '600px',
-            xs: '700px',  
+          md: "550px",
+          sm: "600px",
+          xs: "700px",
         },
       }}
     >
@@ -64,8 +64,8 @@ const DravantiToken = () => {
               maxHeight: "400px",
               objectFit: "cover",
               borderRadius: 2,
-             position: "relative",
-             top: "50px"
+              position: "relative",
+              top: "50px",
             }}
           />
         </Grid>
@@ -78,7 +78,7 @@ const DravantiToken = () => {
               fontWeight: "bold",
               mt: 2,
               position: "relative",
-             top: "50px"
+              top: "50px",
             }}
           >
             The Dravanti Token
@@ -94,7 +94,7 @@ const DravantiToken = () => {
               mt: 2,
               mb: 3,
               position: "relative",
-             top: "50px"
+              top: "50px",
             }}
           >
             The Dravanti Token is a multi-asset backed Security Token, with a
@@ -112,14 +112,20 @@ const DravantiToken = () => {
             sx={{
               backgroundColor: "black",
               color: "white",
-              borderRadius: "20px",
+              borderRadius: "30px",
               paddingX: 3,
-              "&:hover": {
-                backgroundColor: "#333",
-              },
+              height: "50px",
               position: "relative",
-             top: "50px"
+              top: "50px",
+              transition: "all 0.3s ease",
+              width: "150px",
+              "&:hover": {
+                backgroundColor: "#81A89F",
+                transform: "scale(1.1)",
+                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+              },
             }}
+            className="roboto"
           >
             Read More
           </Button>

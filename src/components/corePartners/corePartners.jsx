@@ -3,8 +3,10 @@ import { Box, Typography, Grid } from '@mui/material';
 import GDI from "../../assets/images/gdi.png"; 
 import MBMI from "../../assets/images/mbme.png"; 
 import INTERM from "../../assets/images/inter-m.png"; 
+import { useNavigate } from 'react-router-dom';
 
 const CorePartners = () => {
+  const navigate = useNavigate()
   return (
     <Box sx={{ backgroundColor: '#f4f4f4', py: 5, textAlign: 'center' }}>
       <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 4, color: '#474747', fontSize: 45, fontWeight: "300px", marginBottom: "100px" }}>
@@ -23,7 +25,10 @@ const CorePartners = () => {
               objectFit: 'contain',
               maxWidth: '300px', 
               m: '0 auto',
+              cursor: "pointer"
             }}
+            onClick={()=>navigate("/#")}
+            className='hover-target'
           />
         </Grid>
 
@@ -38,7 +43,10 @@ const CorePartners = () => {
               objectFit: 'contain',
               maxWidth: '300px', 
               m: '0 auto',
+              cursor: "pointer"
             }}
+            onClick={()=>navigate("/#")}
+            className='hover-target'
           />
         </Grid>
 
@@ -53,7 +61,10 @@ const CorePartners = () => {
               objectFit: 'contain',
               maxWidth: '300px',
               m: '0 auto',
+              cursor: "pointer"
             }}
+            onClick={()=>navigate("/#")}
+            className='hover-target'
           />
         </Grid>
       </Grid>

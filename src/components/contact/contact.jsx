@@ -13,7 +13,7 @@ const ContactSection = () => {
           fontWeight="bold"
           sx={{ mb: 6, color: "#E7E9E9", fontSize: 45 }}
         >
-          Contact Us
+          Contact
         </Typography>
 
         <Grid container spacing={4} justifyContent="center">
@@ -52,8 +52,9 @@ const ContactSection = () => {
                 sx={{ mb: 1, color: "#C2C2C2", fontSize: 16 }}
               >
                 There are multiple avenues to invest in the Dravanti Middle East
-                project, both directly and through the purchase of Dravanti
-                Tokens once launched.
+                project, both directly and through the purchase of the Dravanti
+                Tokens once launched. To discuss investment or pre-sale, please
+                reach out to the team.
               </Typography>
               <Typography
                 variant="body2"
@@ -68,7 +69,10 @@ const ContactSection = () => {
                   fontSize: 18,
                   textDecoration: "none",
                   cursor: "pointer",
+                  fontWeight: "300px",
+                  lineHeight: "18px",
                 }}
+                className="roboto hover-target"
               >
                 investments@dravantigroup.com
               </Typography>
@@ -102,14 +106,16 @@ const ContactSection = () => {
                 fontWeight="bold"
                 sx={{ mb: 1, color: "#DBE8E8", fontSize: 24 }}
               >
-                Partnerships
+                Community
               </Typography>
               <Typography
                 variant="body2"
                 sx={{ mb: 1, color: "#C2C2C2", fontSize: 16 }}
               >
-                Dravanti Middle East welcomes partnerships with stakeholders in
-                the energy and commodities sectors to drive mutual growth.
+                Our team maintain connections with multiple global communities
+                in the DeFi and TradFi space. Please reach out to connect and
+                learn more, or join us on any of our growing social media or
+                direct contact channels.
               </Typography>
               <Typography
                 variant="body2"
@@ -124,9 +130,12 @@ const ContactSection = () => {
                   fontSize: 18,
                   textDecoration: "none",
                   cursor: "pointer",
+                  fontWeight: "300px",
+                  lineHeight: "18px",
                 }}
+                className="roboto hover-target"
               >
-                partnerships@dravantigroup.com
+                info@dravantigroup.com
               </Typography>
             </Box>
           </Grid>
@@ -158,14 +167,16 @@ const ContactSection = () => {
                 fontWeight="bold"
                 sx={{ mb: 1, color: "#DBE8E8", fontSize: 24 }}
               >
-                Support
+                Partnerships
               </Typography>
               <Typography
                 variant="body2"
                 sx={{ mb: 1, color: "#C2C2C2", fontSize: 16 }}
               >
-                For inquiries or support, our team is available to assist you
-                with any questions regarding Dravanti Middle East.
+                Dravanti Middle East recognises the value and importance of
+                partnerships to ensure the stability and scalability of its
+                offering. Please reach out to the team to discuss any
+                partnerships or support.
               </Typography>
               <Typography
                 variant="body2"
@@ -179,9 +190,12 @@ const ContactSection = () => {
                   fontSize: 18,
                   textDecoration: "none",
                   cursor: "pointer",
+                  fontWeight: "300px",
+                  lineHeight: "18px",
                 }}
+                className="roboto hover-target"
               >
-                support@dravantigroup.com
+                partners@dravantigroup.com
               </Typography>
             </Box>
           </Grid>

@@ -15,7 +15,7 @@ const History = () => {
     ? "30px"
     : "40px";
   const lineHeight = isSmallScreen
-    ? "30px"
+    ? "20px"
     : isMediumScreen
     ? "40px"
     : "50px";
@@ -28,12 +28,12 @@ const History = () => {
         fontSize: fontSize,
         fontWeight: "bold",
         textAlign: "center",
-        width: "75%",
+        width: { xs: "100%", sm: "100%", md: "75%", lg: "75%" },
         fontStyle: "italic",
         lineHeight: lineHeight,
         marginTop: "50px",
       }}>
-      Over the next 18 months Dravanti Middle East
+      “Over the next 18 months Dravanti Middle East
       will scale to deliver one of the largest
       Real-World-Asset on-chain Portfolios in the
       world. This will be executed through the
