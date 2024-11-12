@@ -6,24 +6,29 @@
   z-index: 10;
   padding: 10px 20px;
   display: flex;
-  align-items: center;
+  align-items: center !important;
   justify-content: space-between;
-  transition: top 0.3s ease,
-    background-color 0.3s ease;
-    border-bottom: .2px solid #475355;
+  transition: top 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  border-bottom: 0.2px solid #475355;
 }
 
 .navbar-visible {
-  width: 100% !important;
   top: 0;
-  /* background-color: rgba(37, 49, 54, 0.7); */
 }
 
 .navbar-hidden {
-  width: 100% !important;
   top: -100px;
   background-color: transparent;
 }
+
+.navbar-scrolled-up {
+  background-color: white;
+}
+
+.navbar-scrolled-up .navbar-menu li a {
+  color: black;
+}
+
 
 .navbar-logo {
   display: flex;
@@ -150,10 +155,13 @@
 }
 
 .investor-login-btn {
-  padding: 8px 16px;
+  padding: 7px 18px;
   border: 2px solid #81a89f;
+  font-size: 15px;
+  font-weight: 500;
+  /* line-height: 15px; */
   border-radius: 5px;
-  background: transparent;
+  background: #0b1824;
   color: #ffff;
   cursor: pointer;
 }
@@ -267,7 +275,7 @@
   transition: color 0.3s ease;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .navbar-menu,
   .investor-login-btn {
     display: none;
