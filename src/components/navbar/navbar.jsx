@@ -76,7 +76,7 @@ const Navbar = () => {
       <div
         className={`navbar ${isVisible ? "navbar-visible" : "navbar-hidden"} ${
           isScrolledUp ? "navbar-scrolled-up" : isMobile ?  "navbar-scrolled-up" : ""
-        }`}
+        } hover-target`}
       >
         <div className="navbar-logo" style={{ width: "20%" }}>
           {!isMobile ? (
