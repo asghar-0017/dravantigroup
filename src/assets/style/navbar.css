@@ -136,12 +136,15 @@
 .dropdown:hover .submenu {
   display: block;
   color: black !important;
-  /* background-color: #f0f0f0; */
 }
 
 .submenu li {
   padding: 5px 10px;
   color: white;
+}
+
+.submenu li:hover {
+  text-decoration: underline;
 }
 
 .investor-login-btn {
