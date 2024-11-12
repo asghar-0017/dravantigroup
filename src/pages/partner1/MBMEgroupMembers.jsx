@@ -20,32 +20,44 @@ const data = [
 
 const MBMEgroupMembers = () => {
   return (
-    <Container maxWidth="lg"  className='container'>
-      <Box my={4} textAlign="left">
-        <Typography variant="body1" color="textSecondary">
+    <Container maxWidth="lg" className='container'>
+      {/* Intro text */}
+      <Box my={4} className='average' textAlign="left" sx={{ paddingX: { xs: '1rem', sm: '2rem' } }}>
+        <Typography variant="body1" color="textSecondary" sx={{ fontSize: { xs: '14px', sm: '15px' }, width:'100%', maxWidth:'80%'}}>
           MBME Group has unparalleled innovation, seamless solutions, and a commitment to excellence, ensuring your business stays ahead in the competitive digital landscape.
         </Typography>
       </Box>
 
-      <Box my={4} textAlign="left"  className='container'>
-        <Typography variant="h4" component="h2">
+      {/* Title */}
+      <Box my={4} textAlign="left" className='dmSans' sx={{ paddingX: { xs: '1rem', sm: '2rem' } }}>
+        <Typography variant="h4" component="h2" sx={{ fontSize: { xs: '24px', sm: '28px', md: '30px' }, fontWeight: 'normal', color:'#233032' }}>
           MBME Group by numbers
         </Typography>
       </Box>
 
-      <Box my={4} textAlign="left"  className='container'>
-        <Typography variant="body1" color="textSecondary">
+      {/* Subtitle */}
+      <Box my={4} textAlign="left" sx={{ paddingX: { xs: '1rem', sm: '2rem' } }}>
+        <Typography variant="body1" color="textSecondary" sx={{ fontSize: { xs: '14px', sm: '16px' } }}>
           Experience the impressive achievements of MBME Group:
         </Typography>
       </Box>
 
-      <Grid container spacing={4}  className='container'>
+      {/* Data grid */}
+      <Grid container spacing={4} sx={{ paddingX: { xs: '1rem', sm: '3rem' } }} className='container'>
         {data.map((item, index) => (
           <Grid item xs={12} sm={6} key={index}>
-            <Box display="flex" alignItems="flex-start">
+            <Box display="flex" alignItems="flex-start" className='roboto container'>
               <FaRegCheckCircle 
-              style={{ color: '#233032', fontSize: '2rem', marginRight: '8px' }} />
-              <Typography variant="body1" color="textPrimary">
+                style={{ color: '#233032', fontSize: '3rem', marginRight: '8px' }} 
+              />
+              <Typography 
+              className='roboto'
+                variant="body1" 
+                color="#7A7A7A" 
+                lineHeight={2}
+
+                sx={{ fontSize: { xs: '14px', sm: '15px' } }}
+              >
                 {item.description}
               </Typography>
             </Box>
@@ -53,8 +65,18 @@ const MBMEgroupMembers = () => {
         ))}
       </Grid>
 
-=      <Box my={4} textAlign="center"  className='container' justifyContent={'center'} alignItems={'center'} >
-        <img src={groupgraph} alt="Group graph" style={{ width: '60%' , objectFit: 'cover' }} />
+      {/* Image */}
+      <Box my={4} textAlign="center" display="flex" justifyContent="center" alignItems="center">
+        <img 
+          src={groupgraph} 
+          alt="Group graph" 
+          style={{ 
+            width: '100%', 
+            maxWidth: '600px', 
+            objectFit: 'cover', 
+            marginTop: '1.5rem' 
+          }} 
+        />
       </Box>
     </Container>
   );
