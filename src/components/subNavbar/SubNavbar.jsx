@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { FaChevronDown, FaTimes } from "react-icons/fa";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
-import logo from "../../assets/images/logo.png";
-import logo2 from "../../assets/images/subLogo.webp";
+// import logo from "../../assets/images/logo.png";
+// import logo2 from "../../assets/images/subLogo.webp";
 import logoMobile from "../../assets/images/mobilelogo.png";
-import "../../assets/style/navbar.css";
+import "../../assets/style/subNavbar.css";
 import { HashLink } from "react-router-hash-link";
 
-const Navbar = () => {
+const SubNavbar = () => {
   const navigate = useNavigate();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [expanded, setExpanded] = useState({});
@@ -74,7 +74,7 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`navbar ${isVisible ? "navbar-visible" : "navbar-hidden"} ${
+        className={`subnavbar ${isVisible ? "navbar-visible" : "navbar-hidden"} ${
           isScrolledUp ? "navbar-scrolled-up" : isMobile ?  "navbar-scrolled-up" : ""
         } hover-target`}
       >
@@ -82,8 +82,8 @@ const Navbar = () => {
           {!isMobile ? (
             <img
               onClick={() => navigate("/")}
-              style={{ width: "100%" }}
-              src={!isScrolledUp ? logo : logo2}
+              style={{ width: "30%" }}
+              src={!isScrolledUp ? logoMobile : logoMobile}
               alt="Dravanti Middle East Logo"
             />
           ) : (
@@ -116,7 +116,7 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className="dropdown" onClick={() => toggleDropdown("Partners")}>
-              <NavLink>
+              <NavLink className='subcate'>
                 Partners <FaChevronDown className="dropdown-icon" />
               </NavLink>
               {expanded.Partners && (
@@ -324,4 +324,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default SubNavbar;

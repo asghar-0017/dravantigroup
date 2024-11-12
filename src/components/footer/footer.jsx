@@ -27,7 +27,7 @@ const Footer = () => {
   return (
     <div style={{ width: "100%" }}>
       <footer className="footer">
-        <div class="footer-container container">
+        <div class="footer-container ">
           <div class="footer-section" style={{ width: "100%" }}>
             <img style={{ width: "80%" }} src={logo} alt="#" />
             <p className="roboto" style={{ paddingLeft: "15px" }}>
@@ -103,7 +103,7 @@ const Footer = () => {
                 <Link to="/">Governance</Link>
               </li>
               <li>
-                <Link to="/">Partners</Link>
+                <Link to="/interMTraders">Partners</Link>
               </li>
               <li>
                 <Link to="/team">Team</Link>
@@ -116,17 +116,17 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div class="footer-section">
+          <div class="footer-section subcat2">
             <h1 className="dmSans">Visit Us</h1>
             <ul>
-              <li style={{letterSpacing:'0.37px',lineHeight:'25px'}}>
+              <li style={{letterSpacing:'0.37px',lineHeight:'25px',fontSize:'18px'}}>
                 Dravanti Middle East <br /> Floor 11-47, Uptown Tower <br /> Dubai Multi
                 Commodities Centre <br /> Unite Arab Emirates
               </li>
               <li>
                 <a
                   className="dmSans"
-                  style={{ textDecoration: "none", color: "#47776c",fontSize:'16px',fontWeight:'700' }}
+                  style={{ textDecoration: "none", color: "#47776c",fontSize:'17px',fontWeight:'700' }}
                   href="mailto:info@dravantigroup.com"
                 >
                   info@dravantigroup.com
