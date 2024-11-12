@@ -8,7 +8,7 @@ const BannerSection = ({name, pageName}) => {
     <Box
       sx={{
         position: 'relative',
-        height: { xs: '50vh', sm: '60vh', md: '70vh' },
+        height: { xs: '50vh', sm: '60vh', md: '90vh' },
         backgroundImage: `url(${BackgroundImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -25,7 +25,7 @@ const BannerSection = ({name, pageName}) => {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          backgroundColor: 'rgba(0, 0, 0, 0.1)',
           zIndex: 1,
         }}
       />
