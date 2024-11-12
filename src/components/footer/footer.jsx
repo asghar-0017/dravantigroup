@@ -30,7 +30,7 @@ const Footer = () => {
         <div class="footer-container container">
           <div class="footer-section" style={{ width: "100%" }}>
             <img style={{ width: "80%" }} src={logo} alt="#" />
-            <p style={{ paddingLeft: "15px" }}>
+            <p className="roboto" style={{ paddingLeft: "15px" }}>
               Stay Updated With Our Latest Insights!
             </p>
             <TextField
@@ -87,7 +87,7 @@ const Footer = () => {
             </Box>
           </div>
           <div class="footer-section subcat">
-            <h1>Home</h1>
+            <h1 className="dmSans">Home</h1>
             <ul>
               <li>
                 <Link to="/">Home</Link>
@@ -113,15 +113,16 @@ const Footer = () => {
             </ul>
           </div>
           <div class="footer-section">
-            <h1>Visit Us</h1>
+            <h1 className="dmSans">Visit Us</h1>
             <ul>
-              <li>
-                Dravanti Middle East Floor 11-47, Uptown Tower Dubai Multi
-                Commodities Centre Unite Arab Emirates
+              <li style={{letterSpacing:'0.37px',lineHeight:'25px'}}>
+                Dravanti Middle East <br /> Floor 11-47, Uptown Tower <br /> Dubai Multi
+                Commodities Centre <br /> Unite Arab Emirates
               </li>
               <li>
                 <a
-                  style={{ textDecoration: "none", color: "#47776c" }}
+                  className="dmSans"
+                  style={{ textDecoration: "none", color: "#47776c",fontSize:'16px',fontWeight:'700' }}
                   href="mailto:info@dravantigroup.com"
                 >
                   info@dravantigroup.com
@@ -150,7 +151,7 @@ const Footer = () => {
           </div>
         </div>
         <div class="footer-bottom">
-          <div>&copy; All Rights Reserved. – Dravanti Middle East</div>
+          <div className="dmSans">&copy; All Rights Reserved. – Dravanti Middle East</div>
           <div className="footer-sub-bottom">
             <Link to="/privacy-policy" target="_self">
               Privacy Policy

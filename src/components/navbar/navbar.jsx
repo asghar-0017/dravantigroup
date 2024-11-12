@@ -129,7 +129,7 @@ const Navbar = () => {
                 Team
               </NavLink>
             </li>
-            <li>
+            <li className="contct">
               <HashLink
                 to="/#contact"
                 smooth
