@@ -58,7 +58,7 @@ const TerritoriesCovered = () => {
           }}
         >
           <CardContent>
-            <Typography variant="h6" component="h3" sx={{ mb: 1 }}>
+            <Typography variant="h6" component="h3" textAlign={'left'} sx={{ mb: 1 }}>
               Vision
             </Typography>
             <Typography variant="body2">
@@ -87,7 +87,7 @@ const TerritoriesCovered = () => {
           }}
         >
           <CardContent>
-            <Typography variant="h6" component="h3" sx={{ mb: 1 }}>
+            <Typography variant="h6" component="h3"  textAlign={'left'}  sx={{ mb: 1 }}>
               Mission
             </Typography>
             <Typography variant="body2">
@@ -116,7 +116,7 @@ const TerritoriesCovered = () => {
           }}
         >
           <CardContent>
-            <Typography variant="h6" component="h3" sx={{ mb: 1 }}>
+            <Typography variant="h6" component="h3"  textAlign={'left'}  sx={{ mb: 1 }}>
               Values
             </Typography>
             <Typography variant="body2">

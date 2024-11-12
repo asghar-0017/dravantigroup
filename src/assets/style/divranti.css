@@ -7,13 +7,13 @@
   background-color:#F9F9F9;
 }
 .heading{
-    font-size: 3.3rem;
-    font-weight:lighter;
+    font-size: 58px;
+    font-weight:500;
     color: #6D6D6D;
     text-align: center !important;
     justify-content: center;
     align-items: center;
-    padding-top: 3rem;
+    padding-top: 3.2rem;
 
 }
 .logo{
@@ -28,7 +28,7 @@
 
 .description{
     box-sizing: border-box;
-    font-size: 1.36rem;
+    font-size: 24px;
     line-height: 1.15;
     color: #92BCB3;
     font-weight: 800;
@@ -50,7 +50,7 @@
 }
 
 .about{
-    font-size: 3rem;
+    font-size: 50px;
     font-weight:lighter;
     color: #6D6D6D;
     text-align: center;
@@ -62,12 +62,13 @@ margin: 70px;
 }
 .paragraph{
     margin: 10px;
-    font-size: 1.1rem;
+    font-size: 18px;
     text-align: center;
-    font-weight: 400;
+    font-weight: 300;
     color: #7A7A7A;
     display: block;
     background-color: #F2F2F2 !important;
+    text-decoration: none solid rgb(122, 122, 122);
     
 
 }

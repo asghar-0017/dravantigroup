@@ -5,7 +5,7 @@ import Mission from "./mission";
 import Tokanization from "./tokanization";
 import AssetsManagment from "./AssetsManagment";
 import SecurityImage from "./SecurityImage";
-import { TableSection } from "../../components/table/table";
+import { AboutTable } from '../../components/table/AboutTables';
 import Counter from "../../components/counter/counter";
 import CorePartners from "../../components/corePartners/corePartners";
 import FeaturesSection from "./FeaturesSection";
@@ -43,7 +43,7 @@ const About = () => {
       />
       <div className="main-dev">
         <div className="containers">
-          <h2 className="heading">
+          <h2 className="heading average">
             DRAVANTI Middle East
           </h2>
           <img
@@ -52,7 +52,7 @@ const About = () => {
             alt="Dravanti Logo"
           />
         </div>
-        <div className="description">
+        <div className="description average" >
           Dravanti Middle East, known as
           “Dravanti”, “Dravanti Group”, or ‘DME’,
           is a commodity and real-world-asset
@@ -68,12 +68,12 @@ const About = () => {
         </div>
         <div className="about-dirivanti">
           <div className="about-content">
-            <h2 className="about">
+            <h2 className="about average">
               About Dravanti
             </h2>
           </div>
           <div className="space"></div>
-          <div className="paragraph">
+          <div className="paragraph average">
             <p>
               Upon launching, Dravanti ME’s will
               harness ~$316m USD in Nickel assets,
@@ -126,11 +126,11 @@ const About = () => {
         </div>
         <Mission />
         <Tokanization />
-        <TableSection content={sampleContent} />
+        <AboutTable content={sampleContent} />
         <SecurityImage />
         <AssetsManagment />
         <FeaturesSection />
-        <Counter bg={"80A89F"} />
+        <Counter bg={"0E2841"} />
         <CorePartners />
       </div>
     </>

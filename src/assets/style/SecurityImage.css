@@ -1,7 +1,7 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px; /* Adds padding for better alignment on small screens */
+  padding: 0 15px; 
 }
 
 .sec-token {
@@ -11,8 +11,9 @@
 }
 
 .sec-token img {
-  width: 100%; /* Ensures the image takes up the full width of its container */
-  max-width: 600px; /* Sets a maximum width to prevent it from getting too large on bigger screens */
+height: 440px;
+width: 768px;
+max-width: 100%;
   height: auto; /* Maintains the image's aspect ratio */
   object-fit: cover; /* Ensures that the image scales properly */
 }

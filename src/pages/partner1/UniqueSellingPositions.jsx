@@ -65,6 +65,7 @@ const UniqueSellingPositions = ({ title, subtitle, points }) => {
                 <Typography
                   variant="body1"
                   component="span"
+                  
                   sx={{
                     display: 'block',
                     textAlign: 'left',

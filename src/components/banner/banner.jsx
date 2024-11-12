@@ -16,6 +16,7 @@ const BannerSection = ({name, pageName}) => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+
       }}
     >
       <Box

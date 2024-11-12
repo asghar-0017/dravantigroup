@@ -4,9 +4,9 @@ import '../../assets/style/FeatureSection.css';
 const FeaturesSection = () => {
   return (
     <div className="containerss">
-      <div className="column">
-        <h3>Compliance</h3>
-        <ul>
+      <div className="column average">
+        <h3 className='alignment'>Compliance</h3>
+        <ul className='size-Alignment average '>
           <li>Places compliant and regulatory compatible protocols at its core.</li>
           <li>Integrates a Smart Contract wrapping to 1:1 the Security Token to ERC-20.</li>
           <li>Enables Exchange listing and functionality.</li>
@@ -14,7 +14,7 @@ const FeaturesSection = () => {
         </ul>
       </div>
       <div className="column">
-        <h3>Accessibility</h3>
+        <h3 className='alignment'>Accessibility</h3>
         <ul>
           <li>Accessible through thousands of Payment points across UAE.</li>
           <li>Universal access through Cash, Visa, Mastercard, Google Pay, and Apple Pay.</li>
@@ -22,7 +22,7 @@ const FeaturesSection = () => {
         </ul>
       </div>
       <div className="column">
-        <h3>Security</h3>
+        <h3 className='alignment'>Security</h3>
         <ul>
           <li>Dravanti Tokens are asset backed to enhance trust and stability of the portfolio.</li>
           <li>Quarterly asset allocations guarantee stable growth and investment value.</li>
@@ -30,7 +30,7 @@ const FeaturesSection = () => {
         </ul>
       </div>
       <div className="column">
-        <h3>Asset</h3>
+        <h3 className='alignment'>Asset</h3>
         <ul>
           <li>Assets are fully owned by Inter-M Traders FZ LLE; fully audited, and secured across multiple sites.</li>
           <li>Assets received industry standard assurance and audit.</li>

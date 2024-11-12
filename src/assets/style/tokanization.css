@@ -1,7 +1,6 @@
 .parent {
   display: flex;
   flex-direction: column;
-  max-width: 1200px;
   margin: 15px;
 }
 
@@ -11,19 +10,19 @@
 }
 
 .heading-tokanization {
-  font-size: 2.7rem;
+  font-size: 45px;
   font-weight: 400;
   color: #6D6D6D;
-  margin: 20px;
+  margin: 0 auto;
   text-align: center !important;
+  margin-top: 3.2rem;
 }
 
 .description-tokanization {
-  font-size: 1.03rem;
+  font-size: 18px;
   line-height: 1.6;
   color: #7A7A7A;
-  font-weight: 400;
-  margin-bottom: 30px;
+  margin: 1px;
 }
 
 .timeline-graph-container {
@@ -31,6 +30,7 @@
   align-items: flex-start;
   gap: 20px;
   flex-wrap: wrap;
+  flex-direction: row; /* Default direction */
 }
 
 .timeline {
@@ -44,8 +44,8 @@
 }
 
 .icon {
-  font-size: 1.4rem;
-  color: #4B6F6B;
+  font-size: 23px;
+  color: #3E6580;
 }
 
 .timeline-content {
@@ -55,8 +55,9 @@
 }
 
 .strong {
-  font-size: 1.1rem;
-  color: #000;
+  font-size: 20px;
+  color: #233032;
+  text-decoration: none solid rgb(35, 48, 50);
 }
 
 .graph-section {
@@ -64,14 +65,19 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  align-items: end;
+  margin: 17px 0 0 0;
+}
 
-}
-.timeline-text{
+.timeline-text {
   margin-top: 10px;
+  font-size: 15px;
+  color: #7A7A7A;
 }
+
 .graph-image {
   width: 100%;
+  max-width: 768px;
+  height: auto; /* Maintain aspect ratio */
   object-fit: cover; 
   display: flex;
   justify-content: right;
@@ -79,17 +85,32 @@
 }
 
 .future-market {
-  font-size: 1rem;
+  font-size: 18px;
   color: #3E6560;
   margin-top: 15px;
-  text-align: center;
+  text-align: left;
   font-weight: 600;
+  font-style: italic;
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .heading-tokanization {
+    font-size: 36px; /* Slightly smaller on tablet */
+  }
+
+  .description-tokanization {
+    font-size: 16px; /* Adjust text size */
+  }
+
+  .graph-image {
+    max-width: 100%;
+    height: auto;
+  }
+
   .timeline-graph-container {
-    flex-direction: column;
+    flex-direction: column; /* Stack items vertically */
+    gap: 15px; /* Reduce gap for small screens */
   }
 
   .timeline {
@@ -98,5 +119,63 @@
 
   .graph-section {
     align-items: center;
+    margin-top: 20px; /* Space between sections */
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .timeline-content {
+    font-size: 14px; /* Smaller font on smaller screens */
+  }
+
+  .strong {
+    font-size: 18px; /* Adjust strong text size */
+  }
+}
+
+@media (max-width: 768px) {
+  .heading-tokanization {
+    font-size: 30px; /* Make heading smaller on mobile */
+  }
+
+  .description-tokanization {
+    font-size: 14px;
+  }
+
+  .timeline {
+    padding-right: 0;
+    flex: none; /* Make it not take full space */
+  }
+
+  .graph-image {
+    max-width: 100%; /* Image takes full width on mobile */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .timeline-graph-container {
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .timeline-content {
+    font-size: 12px; /* Reduce text size for mobile */
+  }
+
+  .strong {
+    font-size: 16px;
+  }
+
+  .future-market {
+    font-size: 16px;
+    text-align: center; /* Center align on mobile */
   }
 }

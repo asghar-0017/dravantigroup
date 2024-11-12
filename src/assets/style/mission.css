@@ -2,28 +2,29 @@
 .mission-container {
     background-color: white;
     width: 100%;
-    padding: 40px;
+    padding: 22px 22px 22px 22px;
     text-align: center;
     border: 1px solid #f2f2f2;
     /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
-    max-width: 1320px;
+    max-width: 1326px;
     margin: 0 auto;
-    height: auto;
+    height: 485px;
   }
   
   .mission-title {
-    font-size: 2.8rem;
-    color: #7A7A7A;
+    font-size: 55 px;
+    color: #47776E;
     margin-top: 8rem;
+    text-align: center;
   }
   
   .mission-description {
     margin-top: 1.5rem;
-    font-size: 1.42rem;
-    color: #7A7A7A;
+    font-size: 24px;
+    color: #3E6560;
     font-style: italic;
     line-height: 1.6;
-    font-weight: 700;
+    font-weight: 800;
   }
   
   /* Responsive adjustments */
