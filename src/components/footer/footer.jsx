@@ -53,10 +53,11 @@ const Footer = () => {
                   borderLeft: "none",
                   borderRight: "none",
                   borderBottom: "2px solid #868F91",
+                  color:'#868F91'
                 },
                 "& .MuiOutlinedInput-notchedOutline": {
                   border: "none",
-                  color: "#868F91",
+              
                 },
                 "& .MuiInputLabel-root": {
                   transform: "translate(14px, 14px) scale(1)",
@@ -64,7 +65,6 @@ const Footer = () => {
                 },
                 "& .MuiInputLabel-shrink": {
                   transform: "translate(14px, -10px) scale(0.75)",
-                  backgroundColor: "#868F91",
                 },
               }}
             />
