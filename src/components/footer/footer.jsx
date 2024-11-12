@@ -121,7 +121,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  style={{ textDecoration: "none", color: "#828c8f" }}
+                  style={{ textDecoration: "none", color: "#47776c" }}
                   href="mailto:info@dravantigroup.com"
                 >
                   info@dravantigroup.com
