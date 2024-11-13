@@ -62,7 +62,7 @@ const InvestorRegistrationForm = () => {
             flexDirection="row"
             alignItems="center"
             justifyContent="center"
-          >
+          > 
             <Box
               component="img"
               src={DravantiGold}
