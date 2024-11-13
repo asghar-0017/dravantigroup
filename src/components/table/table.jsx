@@ -38,4 +38,4 @@ export const TableSection = ({ content }) => (
       ))}
     </Grid>
   </Box>
-)
+);
