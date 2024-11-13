@@ -1,41 +1,77 @@
-import React from 'react';
-import '../../assets/style/FeatureSection.css';
+import React from "react";
+import "../../assets/style/FeatureSection.css";
 
 const FeaturesSection = () => {
   return (
     <div className="containerss">
       <div className="column average">
-        <h3 className='alignment'>Compliance</h3>
-        <ul className='size-Alignment average '>
-          <li>Places compliant and regulatory compatible protocols at its core.</li>
-          <li>Integrates a Smart Contract wrapping to 1:1 the Security Token to ERC-20.</li>
-          <li>Enables Exchange listing and functionality.</li>
-          <li>Permissioned functionality within the Smart Contract.</li>
-        </ul>
+        <h3 className="alignment">Compliance</h3>
+        <div className="size-Alignment average">
+          <p>
+            • Places compliant and regulatory compatible protocols at its core.
+          </p>
+          <p>
+            • Integrates a Smart Contract wrapping to 1:1 the Security Token to
+            ERC-20.
+          </p>
+          <p> • Enables Exchange listing and functionality.</p>
+          <p> • Permissioned functionality within the Smart Contract.</p>
+        </div>
       </div>
+
       <div className="column">
-        <h3 className='alignment'>Accessibility</h3>
-        <ul>
-          <li>Accessible through thousands of Payment points across UAE.</li>
-          <li>Universal access through Cash, Visa, Mastercard, Google Pay, and Apple Pay.</li>
-          <li>Secure verification and Customer on-boarding allows novel payment methods, such as voucher/QR Code.</li>
-        </ul>
+        <h3 className="alignment">Accessibility</h3>
+        <div className="size-Alignment">
+          <p> • Accessible through thousands of Payment points across UAE.</p>
+          <p>
+            {" "}
+            • Universal access through Cash, Visa, Mastercard, Google Pay, and
+            Apple Pay.
+          </p>
+          <p>
+            {" "}
+            • Secure verification and Customer on-boarding allows novel payment
+            methods, such as voucher/QR Code.
+          </p>
+        </div>
       </div>
+
       <div className="column">
-        <h3 className='alignment'>Security</h3>
-        <ul>
-          <li>Dravanti Tokens are asset backed to enhance trust and stability of the portfolio.</li>
-          <li>Quarterly asset allocations guarantee stable growth and investment value.</li>
-          <li>Assets are fully valued, audited, secured and warehoused in tier 1 locations.</li>
-        </ul>
+        <h3 className="alignment">Security</h3>
+        <div className="size-Alignment">
+          <p>
+            {" "}
+            • Dravanti Tokens are asset backed to enhance trust and stability of
+            the portfolio.
+          </p>
+          <p>
+            {" "}
+            • Quarterly asset allocations guarantee stable growth and investment
+            value.
+          </p>
+          <p>
+            {" "}
+            • Assets are fully valued, audited, secured and warehoused in tier 1
+            locations.
+          </p>
+        </div>
       </div>
+
       <div className="column">
-        <h3 className='alignment'>Asset</h3>
-        <ul>
-          <li>Assets are fully owned by Inter-M Traders FZ LLE; fully audited, and secured across multiple sites.</li>
-          <li>Assets received industry standard assurance and audit.</li>
-          <li>Assets assigned to Dravanti ME portfolio as part of a predictable and stable alignment process.</li>
-        </ul>
+        <h3 className="alignment">Asset</h3>
+        <div className="size-Alignment">
+          <p>
+            {" "}
+            • Assets are fully owned by Inter-M Traders FZ LLE; fully audited,
+            and secured across multiple sites.
+          </p>
+          <p> • Assets received industry standard assurance and audit.</p>
+          <p>
+            {" "}
+            • Assets assigned to Dravanti ME portfolio as part of a predictable
+            and stable alignment process.
+          </p>
+        </div>
       </div>
     </div>
   );

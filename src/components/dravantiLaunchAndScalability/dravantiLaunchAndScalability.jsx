@@ -56,8 +56,8 @@ const DravantiMiddleEastLaunch = () => {
               height: "2px",
               width: "300px",
               backgroundColor: "#D9D9D9",
-              marginRight: -7,
-              marginLeft: -5,
+              // marginRight: -7,
+              // marginLeft: -5,
             }}
           />
         </Grid>
@@ -75,8 +75,8 @@ const DravantiMiddleEastLaunch = () => {
               height: "2px",
               width: "300px",
               backgroundColor: "#D9D9D9",
-              marginRight: -7,
-              marginLeft: -5,
+              // marginRight: -7,
+              // marginLeft: -5,
             }}
           />
         </Grid>
