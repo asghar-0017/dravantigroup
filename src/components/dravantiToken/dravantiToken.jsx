@@ -26,7 +26,7 @@ const DravantiToken = () => {
           width: "100%",
           height: "30%",
           bgcolor: "#81A89F",
-          margin:'10px'
+          margin:'8px'
         }}
       />
 
@@ -75,8 +75,10 @@ const DravantiToken = () => {
           <Typography
             variant="h4"
             sx={{
-              color: "black",
-              fontWeight: "bold",
+              className:'average',
+              fontSize:'40px',
+              color: "#92BCB3",
+              fontWeight: 600,
               mt: 2,
               position: "relative",
               top: "50px",
@@ -85,17 +87,20 @@ const DravantiToken = () => {
             The Dravanti Token
           </Typography>
         </Grid>
-
+            &nbsp;
         <Grid item>
           <Typography
-            variant="body1"
+          className="dmSans"
+            variant="body"
             sx={{
-              color: "text.secondary",
+              color: "#475355",
               maxWidth: "600px",
               mt: 2,
               mb: 3,
               position: "relative",
               top: "50px",
+              fontSize:'17.63px',
+              margin: 0.0001
             }}
           >
             The Dravanti Token is a multi-asset backed Security Token, with a
@@ -105,6 +110,7 @@ const DravantiToken = () => {
             traditionally associated to institutional funds and finance.
           </Typography>
         </Grid>
+        &nbsp;
 
         <Grid item>
           <Button
