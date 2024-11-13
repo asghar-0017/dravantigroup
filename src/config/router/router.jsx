@@ -19,6 +19,7 @@ const MainRouter = () => {
   const location = useLocation();
 
   const isAlternateNavbarRoute = [
+    "/team",
     "/interMTraders",
     "/MBMEgroup",
     "/GulfInternational",

@@ -204,7 +204,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 430px;
+    width: 100vw;
+    /* width: 430px; */
     background-color: #253136;
     color: white;
     transform: translateX(-100%);
