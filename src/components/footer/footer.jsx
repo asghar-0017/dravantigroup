@@ -6,10 +6,7 @@ import { FaLinkedin, FaTelegram, FaTwitter, FaEnvelope } from 'react-icons/fa';
 
 
 import logo from "../../assets/images/logo.png";
-import letter from "../../assets/images/letter.png";
-import linkedin from "../../assets/images/linkedin.png";
-import telegram from "../../assets/images/telegram.png";
-import twitter from "../../assets/images/twitter.png";
+
 
 import {
   Container,
