@@ -11,8 +11,8 @@
     align-items: start;
     /* width: 100%; */
     /* max-width: 1500px; */
-    margin: 0 auto;
-    padding: 2rem;
+    /* margin: 0 auto; */
+    padding: 3rem;
     /* padding-top: 50px;
     padding-bottom: 50px !important; */
 }
@@ -40,7 +40,7 @@
     text-decoration: none;
 }
 .footer-section ul li a:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
     color: #FFFF;
 }
 .footer-bottom {
@@ -91,6 +91,7 @@
     }
     .footer-section {
         text-align: center;
+        
     }
     .main-container{
         flex-direction: column;

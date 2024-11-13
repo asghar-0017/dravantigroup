@@ -130,7 +130,7 @@ const About = () => {
         <SecurityImage />
         <AssetsManagment />
         <FeaturesSection />
-        <Counter bg={"0E2841"} />
+        <Counter bg={"253136"} />
         <CorePartners />
       </div>
     </>

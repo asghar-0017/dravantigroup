@@ -1,22 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Box, Typography, Breadcrumbs, Link } from '@mui/material';
 import BackgroundImage from "../../assets/images/banner.jpg";
 import { FaGreaterThan } from "react-icons/fa6";
 
-const BannerSection = ({name, pageName}) => {
+const BannerSection = ({ name, pageName }) => {
+  const [offsetY, setOffsetY] = useState(0);
+
+  const handleScroll = () => {
+    setOffsetY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <Box
       sx={{
         position: 'relative',
         height: { xs: '50vh', sm: '60vh', md: '90vh' },
-        backgroundImage: `url(${BackgroundImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        overflow: 'hidden',
         color: 'white',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-
       }}
     >
       <Box
@@ -26,7 +34,23 @@ const BannerSection = ({name, pageName}) => {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundColor: 'rgba(0, 0, 0, 0.1)',
+          backgroundImage: `url(${BackgroundImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          transform: `translateY(${offsetY * 0.1}px)`, 
+          transition: 'transform 0.7s ease-out', 
+          width: "120%"
+        }}
+      />
+
+      <Box
+        sx={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.05)',
           zIndex: 1,
         }}
       />

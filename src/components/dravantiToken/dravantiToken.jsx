@@ -16,6 +16,7 @@ const DravantiToken = () => {
           sm: "600px",
           xs: "700px",
         },
+        paddingBottom: "50px"
       }}
     >
       <Box
