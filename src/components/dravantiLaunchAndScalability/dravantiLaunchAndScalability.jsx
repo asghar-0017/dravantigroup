@@ -40,14 +40,14 @@ const DravantiMiddleEastLaunch = () => {
   ];
 
   return (
-    <Box sx={{ backgroundColor: "#f4f4f4", py: 5 }} className="container">
-      <Grid container justifyContent="center" spacing={2}>
+    <Box sx={{ backgroundColor: "#f4f4f4", py: 5, display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center" }} className="container">
+      <Grid container justifyContent="center" spacing={2} sx={{ display: "flex", justifyContent: "space-evenly", width: "90%"}}>
         <Grid item>
           <Box
             component="img"
             src={Nickel}
             alt="Nickel"
-            sx={{ width: 100, height: 100, objectFit: "cover" }}
+            sx={{ width: 80, height: 80, objectFit: "cover" }}
           />
         </Grid>
         <Grid item sx={{ display: "flex", alignItems: "center" }}>
@@ -56,8 +56,8 @@ const DravantiMiddleEastLaunch = () => {
               height: "2px",
               width: "300px",
               backgroundColor: "#D9D9D9",
-              marginRight: -5,
-              marginLeft: -2,
+              marginRight: -7,
+              marginLeft: -5,
             }}
           />
         </Grid>
@@ -66,7 +66,7 @@ const DravantiMiddleEastLaunch = () => {
             component="img"
             src={Copper}
             alt="Copper"
-            sx={{ width: 100, height: 100, objectFit: "cover" }}
+            sx={{ width: 80, height: 80, objectFit: "cover" }}
           />
         </Grid>
         <Grid item sx={{ display: "flex", alignItems: "center" }}>
@@ -75,8 +75,8 @@ const DravantiMiddleEastLaunch = () => {
               height: "2px",
               width: "300px",
               backgroundColor: "#D9D9D9",
-              marginRight: -5,
-              marginLeft: -2,
+              marginRight: -7,
+              marginLeft: -5,
             }}
           />
         </Grid>
@@ -85,7 +85,7 @@ const DravantiMiddleEastLaunch = () => {
             component="img"
             src={Gold}
             alt="Gold"
-            sx={{ width: 100, height: 100, objectFit: "cover" }}
+            sx={{ width: 80, height: 80, objectFit: "cover" }}
           />
         </Grid>
       </Grid>
@@ -99,12 +99,13 @@ const DravantiMiddleEastLaunch = () => {
                 gutterBottom
                 fontSize={18}
                 textAlign={"left"}
+                lineHeight="29.988px"
               >
                 {section.title}
               </Typography>
               <Box sx={listStyle}>
                 {section.points.map((point, idx) => (
-                  <Typography variant="body1" key={idx} fontSize={18}>
+                  <Typography variant="body1" key={idx} fontSize={18} color="#aeaeae" lineHeight="29.988px">
                     • {point}
                   </Typography>
                 ))}
