@@ -11,7 +11,7 @@ import {
 import DravantiGold from "../../assets/images/dravanti-gold-logo.png";
 import DravantiGold2 from "../../assets/images/logo2.webp";
 
-const  SubscribeForUpdates = () => {
+const SubscribeForUpdates = () => {
   const {
     register,
     handleSubmit,
@@ -54,25 +54,41 @@ const  SubscribeForUpdates = () => {
             component="img"
             src={DravantiGold2}
             alt="Dravanti Gold Logo"
-            sx={{ width: 100, height: 100, mb: 2 }}
+            sx={{
+              width: { xs: 70, sm: 100, md: 120, lg: 120 },
+              height: { xs: 70, sm: 100, md: 120, lg: 120 },
+              mb: 2,
+            }}
             loading="lazy"
           />
-          <Grid container alignItems="center" justifyContent="center">
+          <Grid
+            container
+            alignItems="center"
+            justifyContent="center"
+            flexDirection="row"
+          >
             <Box
               component="img"
               src={DravantiGold}
               alt="Dravanti Gold Logo 2"
-              sx={{ width: 150, height: 100, marginRight: 1 }}
+              sx={{
+                width: { xs: 100, sm: 120, md: 150, lg: 150 },
+                height: { xs: 60, sm: 80, md: 100, lg: 100 },
+                marginRight: 1,
+              }}
               loading="lazy"
             />
             <Typography
               variant="h5"
               align="center"
               fontWeight="bold"
-              fontSize={45}
               color="#253136"
-              className="avaerage"
-              sx={{ fontWeight: "bold", lineHeight: "50px" }}
+              className="average"
+              sx={{
+                fontSize: { xs: 25, sm: 30, md: 45, lg: 50 },
+                fontWeight: "bold",
+                lineHeight: { xs: "30px", sm: "40px", md: "50px", lg: "55px" },
+              }}
             >
               DRAVANTI
               <Typography
@@ -80,8 +96,16 @@ const  SubscribeForUpdates = () => {
                 align="center"
                 fontWeight="bold"
                 textAlign="left"
-                fontSize={31}
+                fontSize={{ xs: 20, sm: 24, md: 31, lg: 35 }}
                 color="#253136"
+                sx={{
+                  lineHeight: {
+                    xs: "24px",
+                    sm: "32px",
+                    md: "40px",
+                    lg: "45px",
+                  },
+                }}
               >
                 Middle East
               </Typography>
