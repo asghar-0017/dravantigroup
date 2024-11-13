@@ -2,7 +2,7 @@ import React from "react";
 import "../../assets/style/footer.css";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import { FaLinkedin, FaTelegram, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin, FaTelegram, FaTwitter,  } from 'react-icons/fa';
 
 
 import logo from "../../assets/images/logo.png";
@@ -99,7 +99,7 @@ const Footer = () => {
             </Box>
           </div>
           <div class="footer-section subcat">
-            <h1 className="dmSans">Home</h1>
+            <h1 className="dmSans" style={{color:'white',fontSize:'22px'}}>Home</h1>
             <ul>
               <li>
                 <Link to="/">Home</Link>
@@ -125,9 +125,9 @@ const Footer = () => {
             </ul>
           </div>
           <div class="footer-section subcat2">
-            <h1 className="dmSans">Visit Us</h1>
+            <h1 className="dmSans" style={{color:'white',fontSize:'24px'}}>Visit Us</h1>
             <ul>
-              <li style={{letterSpacing:'0.37px',lineHeight:'25px',fontSize:'18px'}}>
+              <li style={{letterSpacing:'0.37px',lineHeight:'25px',fontSize:'17px',fontWeight:'700',color:'#868f91'}}>
                 Dravanti Middle East <br /> Floor 11-47, Uptown Tower <br /> Dubai Multi
                 Commodities Centre <br /> Unite Arab Emirates
               </li>
