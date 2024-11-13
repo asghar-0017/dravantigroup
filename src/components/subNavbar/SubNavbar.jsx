@@ -116,7 +116,7 @@ const SubNavbar = () => {
               </NavLink>
             </li>
             <li className="dropdown" onClick={() => toggleDropdown("Partners")}>
-              <NavLink className='subcate'>
+              <NavLink >
                 Partners <FaChevronDown className="dropdown-icon" />
               </NavLink>
               {expanded.Partners && (
