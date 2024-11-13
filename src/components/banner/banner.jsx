@@ -43,7 +43,6 @@ const BannerSection = ({ name, pageName }) => {
         }}
       />
 
-      {/* Overlay for darkening the background */}
       <Box
         sx={{
           position: 'absolute',
@@ -56,7 +55,6 @@ const BannerSection = ({ name, pageName }) => {
         }}
       />
 
-      {/* Content on top of the background */}
       <Box
         sx={{
           position: 'relative',
