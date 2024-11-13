@@ -2,6 +2,8 @@ import React from "react";
 import "../../assets/style/footer.css";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { FaLinkedin, FaTelegram, FaTwitter, FaEnvelope } from 'react-icons/fa';
+
 
 import logo from "../../assets/images/logo.png";
 import letter from "../../assets/images/letter.png";
@@ -24,6 +26,15 @@ const Footer = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+  const iconStyle = { width: '35px', height: '35px', color: '#ffff' };
+
+  const iconStyleM = {
+    fontSize: '35px', // Adjust font size to match other icons
+    fontWeight: 'bold',
+    color: '#ffff', // Adjust color as needed
+    textDecoration:'none'
+  };
   return (
     <div style={{ width: "100%" }}>
       <footer className="footer">
@@ -134,20 +145,20 @@ const Footer = () => {
               </li>
             </ul>
             <div className="footer-icon">
-              <div>
-                <a href="http://" target="_blank" rel="noopener noreferrer">
-                  <img style={{ width: "35px" }} src={linkedin} alt="" />
-                </a>
-              </div>
-              <a href="http://" target="_blank" rel="noopener noreferrer">
-                <img src={telegram} alt="" />
-              </a>
-              <a href="http://" target="_blank" rel="noopener noreferrer">
-                <img src={twitter} alt="" />
-              </a>
-              <a href="http://" target="_blank" rel="noopener noreferrer">
-                <img src={letter} alt="" />
-              </a>
+            <div style={{ display: 'flex', gap: '20px',alignItems:'center' }}>
+      <a href="http://" target="_blank" rel="noopener noreferrer">
+        <FaLinkedin style={iconStyle} />
+      </a>
+      <a href="http://" target="_blank" rel="noopener noreferrer">
+        <FaTelegram style={{ ...iconStyle, color: '#ffff' }} />
+      </a>
+      <a href="http://" target="_blank" rel="noopener noreferrer">
+        <FaTwitter style={{ ...iconStyle, color: '#ffff' }} />
+      </a>
+      <a href="http://" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none'}}>
+        <span style={iconStyleM}>M</span>
+      </a>
+    </div>
             </div>
             <div style={{ paddingLeft: "30px", paddingTop: "10px" }}>
               <h5>(Coming Soon)</h5>
