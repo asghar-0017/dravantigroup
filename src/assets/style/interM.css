@@ -48,8 +48,9 @@
   
   .header p {
     font-size: 16px;
-    color: #666;
+    color: #475355;
     margin-top: 10px;
+    line-height: 23px;
   }
   
   .services {
@@ -59,12 +60,12 @@
   }
   .service-card{
     width: 100%;
-    max-width: 400px;
+    max-width: 350px;
     margin: 6px;
-    padding: 40px;
+    padding: 20px;
     background-color: rgb(255, 255, 255);
     border-radius: 15px;
-    box-shadow: 4px 4px 8px rgb(192, 192, 192);
+    box-shadow: 6px 6px 8px rgb(192, 192, 192);
   }
   @media (max-width: 768px) {
     .header{

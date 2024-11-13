@@ -40,12 +40,12 @@ const InterMTraders = () => {
       </div>
       <div className="services average">
         <ServiceCard 
-          icon={icon1}
+          icon={icon2}
           title="Advisory Services" 
           description="Providing solutions to complex business and financial problems."
         />
         <ServiceCard 
-          icon={icon2}
+          icon={icon1}
           title="Investing Services" 
           description="Inter-M is a “strategic advisor” and “investor” in private equity transactions."
         />
@@ -66,7 +66,7 @@ const InterMTraders = () => {
         </p>
         </div>
         <div style={{width:'90%'}}>
-            <img src={subBanner} style={{width:'100%'}} alt="" />
+            <img src={subBanner} style={{width:'100%',height:'100%'}} alt="" />
         </div>  
       </div>
       <div className='subDescription average'><h4 className='average'>Everything we do is guided by a set of principles that define the firm’s character and culture; they have been at the core of Inter-M since its inception. These enduring qualities are the shared convictions that we as partners bring to our professional and personal conduct; they are a fundamental strength of our business.</h4>
