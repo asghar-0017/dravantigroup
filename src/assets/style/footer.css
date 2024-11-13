@@ -40,7 +40,7 @@
     text-decoration: none;
 }
 .footer-section ul li a:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
     color: #FFFF;
 }
 .footer-bottom {
