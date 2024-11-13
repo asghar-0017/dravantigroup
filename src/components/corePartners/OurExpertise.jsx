@@ -5,7 +5,7 @@ import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
 const ExpertiseSection = () => {
   return (
-    <Container maxWidth="md" sx={{ my: 8 }}>
+    <Container maxWidth="md" sx={{ my: 8,paddingX: { xs: '2rem', md:'0.1rem' } }}>
      <Typography variant="h4" component="h2" gutterBottom className='dmSans' fontSize={'30px'} color='#233032'>
         Our Expertise
       </Typography>
@@ -42,7 +42,9 @@ const ExpertiseSection = () => {
         </Grid>
       </Box>
 
-      <Box sx={{ mt: 8 }}>
+      <Box 
+      sx={{ mt: 8,paddingX: { xs: '1.2rem', md:'0.1rem' } }}
+      >
         <Typography variant="h4" component="h2" className='dmSans' fontSize={'30px'} color='#233032' gutterBottom>
           Longstanding Government Partnerships
         </Typography>
@@ -52,7 +54,7 @@ const ExpertiseSection = () => {
         </Typography>
       </Box>
 
-      <Box sx={{ mt: 3 }}>
+      <Box sx={{ mt: 3 , paddingX: { xs: '1.2rem', md:'0.1rem' }}}>
         <Typography variant="h4" component="h2" gutterBottom className='dmSans' fontSize={'30px'} color='#233032'>
           Specialized Vertical Solutions
         </Typography>
