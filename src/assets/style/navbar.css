@@ -19,10 +19,12 @@
 .navbar-hidden {
   top: -100px;
   background-color: transparent;
+  border-bottom: none;
 }
 
 .navbar-scrolled-up {
   background-color: white;
+  border-bottom: none;
 }
 
 .navbar-scrolled-up .navbar-menu li a {
