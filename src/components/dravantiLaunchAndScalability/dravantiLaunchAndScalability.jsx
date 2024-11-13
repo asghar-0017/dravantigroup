@@ -54,7 +54,7 @@ const DravantiMiddleEastLaunch = () => {
           <Box
             sx={{
               height: "2px",
-              width: "300px",
+              width: { xs: "250px", sm: "250px", md: "300px", lg: "300px" },
               backgroundColor: "#D9D9D9",
               // marginRight: -7,
               // marginLeft: -5,
@@ -73,7 +73,7 @@ const DravantiMiddleEastLaunch = () => {
           <Box
             sx={{
               height: "2px",
-              width: "300px",
+              width: { xs: "250px", sm: "250px", md: "300px", lg: "300px" },
               backgroundColor: "#D9D9D9",
               // marginRight: -7,
               // marginLeft: -5,
