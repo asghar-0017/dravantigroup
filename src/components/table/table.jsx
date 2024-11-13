@@ -17,17 +17,21 @@ export const TableSection = ({ content }) => (
           sm={6}
           md={3}
           key={index}
+          className="dnSans"
           sx={{
+            fontSize:'18px',
             textAlign: "center",
-            border: "2px solid #D9D9D9",
+            border: "3px solid #D9D9D9",
+            width:'340px',
+            height:'280px',
             borderBottom: "2px solid #D9D9D9",
             padding: 2,
           }}
         >
-          <Typography variant="h5" sx={{ fontWeight: "bold", mb: 1, color: "#5D6568", fontSize: 24, fontWeight: 300 }}>
+          <Typography variant="h5" className="average" textAlign={'center'} sx={{ fontWeight: "bold", mb: 1, color: "#5D6568", fontSize: 24, fontWeight: 300 }}>
             {item.heading}
           </Typography>
-          <Typography variant="body1" sx={{color: "#7A7A7A", fontSize: 15, margin: "0px 0px 15px" }}>
+          <Typography variant="body1" className="average" fontWeight={200} sx={{color: "#7A7A7A", fontSize: 15, margin:'1.5px'}}>
             {item.paragraph}
           </Typography>
         </Grid>
