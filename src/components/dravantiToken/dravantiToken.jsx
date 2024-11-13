@@ -24,8 +24,9 @@ const DravantiToken = () => {
           top: 0,
           left: 0,
           width: "100%",
-          height: "40%",
+          height: "30%",
           bgcolor: "#81A89F",
+          margin:'10px'
         }}
       />
 
@@ -60,7 +61,7 @@ const DravantiToken = () => {
             alt="the dravanti token"
             loading="lazy"
             sx={{
-              width: { xs: "60%", md: "50%" },
+              width: { xs: "60%", md: "60%" },
               maxHeight: "400px",
               objectFit: "cover",
               borderRadius: 2,
