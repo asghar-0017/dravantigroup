@@ -72,7 +72,7 @@ const Navbar = () => {
   };
 
   return (
-    <>
+    <div>
       <div
         className={`navbar ${isVisible ? "navbar-visible" : "navbar-hidden"} ${
           isScrolledUp ? "navbar-scrolled-up" : isMobile ?  "navbar-scrolled-up" : ""
@@ -320,7 +320,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

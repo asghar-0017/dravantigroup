@@ -9,7 +9,7 @@
     align-items: center !important;
     justify-content: space-between;
     transition: top 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-    border-bottom: 0.2px solid #475355;
+    /* border-bottom: 0.2px solid #475355; */
     background-color: #121A1D;
   }
   
