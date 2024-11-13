@@ -79,7 +79,7 @@ const HeroSection = () => {
           </Box>
         ))}
       </Slider>
-      <Box
+      <Box 
         sx={{
           position: "absolute",
           // bottom: "5%",
