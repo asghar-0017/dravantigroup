@@ -2,65 +2,86 @@ import React from 'react';
 import { Box, TextField, Button, Typography, Container, Grid } from '@mui/material';
 import { styled } from '@mui/system';
 
+import logo from '../../assets/images/logo2.webp';
+
 const StyledContainer = styled(Container)({
-  backgroundColor: '#f5f5f5',
+  backgroundColor: 'white',
   borderRadius: '20px',
-  padding: '40px',
+  padding: '30px',
   boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
   maxWidth: '800px',
-  marginTop: '50px',
+  margin:'3rem 1rem 9.5rem 1rem',
 });
 
 const SubscribeForm = () => {
   return (
     <Box
       sx={{
-        backgroundColor: '#1f2933',
-        minHeight: '100vh',
+        backgroundColor: '#253136',
         display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: '20px',
+
+
+        // justifyContent: 'center',
+        // alignItems: 'center',
+
       }}
     >
       <StyledContainer>
-        <Grid container spacing={4} alignItems="center">
-          {/* Left side - Logo as an Image */}
-          <Grid item xs={12} md={4} sx={{ display: 'flex', justifyContent: 'center' }}>
+        <Grid container spacing={5} alignItems="center">
+          <Grid item xs={12} md={5} sx={{ display: 'flex', justifyContent: 'center' }}>
             <img
-              src="/path/to/your/logo.png" // Replace with your image path
+              src={logo}
               alt="Logo"
-              style={{ width: '80px', height: '80px', borderRadius: '50%' }}
+              style={{ width: '118px', height: '118px', borderRadius: '50%' }}
             />
           </Grid>
 
           {/* Right side - Form */}
-          <Grid item xs={12} md={8}>
-            <Typography variant="h5" sx={{ fontWeight: 'bold', marginBottom: '20px' }}>
+          <Grid item xs={12} md={7}>
+            <Typography
+              variant="h5"
+              sx={{ fontWeight: '600', marginBottom: '20px', color: '#253136', fontSize: '30px', textAlign:'center' }}
+            >
               Subscribe for updates
             </Typography>
+
             <TextField
               variant="outlined"
               label="Name"
               fullWidth
-              sx={{ marginBottom: '20px' }}
+              sx={{
+                maxWidth: '698px',
+                marginBottom: '20px',
+                '& .MuiOutlinedInput-root': {
+                  borderRadius: '10px',
+                },
+              }}
             />
+
             <TextField
               variant="outlined"
               label="Your email address"
               fullWidth
-              sx={{ marginBottom: '20px' }}
+              sx={{
+                maxWidth: '698px',
+                marginBottom: '20px',
+                '& .MuiOutlinedInput-root': {
+                  borderRadius: '10px',
+                },
+              }}
             />
+
             <Button
               variant="contained"
+              fullWidth
               sx={{
                 backgroundColor: '#1f2933',
                 color: 'white',
                 borderRadius: '50px',
-                width: '100%',
                 padding: '10px 0',
                 fontSize: '16px',
                 textTransform: 'none',
+                maxWidth: '698px',
                 '&:hover': {
                   backgroundColor: '#1b232a',
                 },
@@ -68,12 +89,16 @@ const SubscribeForm = () => {
             >
               Send
             </Button>
+
             <Typography
               variant="body2"
               sx={{
                 marginTop: '15px',
-                color: '#6b7280',
+                color: '#475355',
                 fontSize: '14px',
+                maxWidth: '698px',
+                fontStyle:'italic',
+                textAlign:'center'
               }}
             >
               Dravanti does not maintain a Newsletter, and will only send information on key announcements.

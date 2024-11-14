@@ -8,7 +8,7 @@ const Contact = lazy(() => import("../../components/contact/contact"));
 const CorePartners = lazy(() => import("../../components/corePartners/corePartners"));
 const Counter = lazy(() => import("../../components/counter/counter"));
 const DravantiToken = lazy(() => import("../../components/dravantiToken/dravantiToken"));
-const InvestorRegistrationForm = lazy(() => import("../../components/investorRegistration/investorRegistration"));
+const SubscribeForm = lazy(() => import("../../components/investorRegistration/SubscribeForm"));
 const DravantiLaunchAndScalability = lazy(() => import("../../components/dravantiLaunchAndScalability/dravantiLaunchAndScalability"));
 
 // Add keyf
@@ -49,10 +49,10 @@ const Home = () => {
       <TableSection content={sampleContent} />
       {/* <DravantiToken /> */}
       {/* <DravantiLaunchAndScalability /> */}
-      {/* <InvestorRegistrationForm /> */}
       <Counter bg={"0E2841"}/>
       <CorePartners />
       <Contact />
+      <SubscribeForm />
     </div>
   );
 };
