@@ -35,7 +35,7 @@ const CircleItem = ({ value, label }) => (
     sx={{
       width: { xs: 230, sm: 300, md: 305 },
       height: { xs: 230, sm: 300, md: 305 },
-      marginLeft:{xs:6},
+      marginLeft:{xs:6 , sm:0 , md: 0},
       borderRadius: "50%",
       backgroundColor: "",
       border: "1px solid #3D5059",
@@ -87,7 +87,7 @@ const Counter = ({ bg }) => {
       }}
       className="hover-target"
     >
-      <Grid container spacing={3} justifyContent="center" alignItems="center">
+      <Grid container spacing={2} justifyContent="center" alignItems="center">
         {data.map((item, index) => (
           <Grid item xs={12} sm={6} md={3} key={index}>
             <CircleItem value={item.value} label={item.label} />
