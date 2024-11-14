@@ -3,12 +3,15 @@ import { TableSection } from "../../components/table/table";
 
 const HeroSection = lazy(() => import("../../components/heroSection/herSection"));
 const History = lazy(() => import("../../components/history/history"));
+const History2 = lazy(() => import("../../components/history/History2"));
 const Contact = lazy(() => import("../../components/contact/contact"));
 const CorePartners = lazy(() => import("../../components/corePartners/corePartners"));
 const Counter = lazy(() => import("../../components/counter/counter"));
 const DravantiToken = lazy(() => import("../../components/dravantiToken/dravantiToken"));
 const InvestorRegistrationForm = lazy(() => import("../../components/investorRegistration/investorRegistration"));
 const DravantiLaunchAndScalability = lazy(() => import("../../components/dravantiLaunchAndScalability/dravantiLaunchAndScalability"));
+
+// Add keyf
 
 const Home = () => {
   const sampleContent = [
@@ -33,14 +36,20 @@ const Home = () => {
         "Dravanti Middle East maintains transparency through the development and delivery of full regulatory and legal compliance, ensuring investors have access to accurate, timely, and comprehensive information about our products, processes, and company performance.",
     },
   ];
+
+
+
+
   return (
     <div>
       <HeroSection />
       <History />
+      <History2 />
+      {/* <StyleInjector /> */}
       <TableSection content={sampleContent} />
-      <DravantiToken />
-      <DravantiLaunchAndScalability />
-      <InvestorRegistrationForm />
+      {/* <DravantiToken /> */}
+      {/* <DravantiLaunchAndScalability /> */}
+      {/* <InvestorRegistrationForm /> */}
       <Counter bg={"0E2841"}/>
       <CorePartners />
       <Contact />
