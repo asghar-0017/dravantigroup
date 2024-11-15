@@ -1,114 +1,190 @@
-import React from 'react';
-import { Box, TextField, Button, Typography, Container, Grid } from '@mui/material';
-import { styled } from '@mui/system';
+import React from "react";
+import { useForm } from "react-hook-form";
+import {
+  Container,
+  Grid,
+  Typography,
+  TextField,
+  Button,
+  Box,
+} from "@mui/material";
+import DravantiGold from "../../assets/images/dravanti-gold-logo.png";
+import DravantiGold2 from "../../assets/images/logo2.webp";
 
-import logo from '../../assets/images/logo2.webp';
+const SubscribeForUpdates = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-const StyledContainer = styled(Container)({
-  backgroundColor: 'white',
-  borderRadius: '20px',
-  padding: '30px ',
-  boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
-  // width:'100%',
-  maxWidth: '800px',
-  margin:'3rem 1rem 9.5rem 1rem',
-});
+  const onSubmit = (data) => {
+    console.log(data);
+  };
 
-const SubscribeForm = () => {
   return (
-    <Box
+    <Container
+      maxWidth="100%"
       sx={{
-        width:"100%",
-        backgroundColor: '#253136',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding:'2rem'
-
+        p: 4,
+        bgcolor: "#253136",
+        paddingBottom: 20,
+        paddingTop: 20,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
       }}
     >
-      <StyledContainer>
-        <Grid container spacing={12} alignItems="center">
-          <Grid item xs={12} md={5} sx={{ display: 'flex', justifyContent: 'center' }}>
-            <img
-              src={logo}
-              alt="Logo"
-              style={{ width: '118px', height: '118px', borderRadius: '50%' }}
-            />
-          </Grid>
-
-          {/* Right side - Form */}
-          <Grid item xs={12} md={7}>
-            <Typography
+      <Grid
+        container
+        spacing={1}
+        alignItems="center"
+        justifyContent="center"
+        sx={{ bgcolor: "#ffff", borderRadius: "20px", p: 3, width: "90%" }}
+      >
+        <Grid
+          item
+          xs={12}
+          md={5}
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+        >
+          <Box
+            component="img"
+            src={DravantiGold2}
+            alt="Dravanti Gold Logo"
+            sx={{
+              width: { xs: 70, sm: 100, md: 120, lg: 120 },
+              height: { xs: 70, sm: 100, md: 120, lg: 120 },
+              mb: 2,
+            }}
+            loading="lazy"
+          />
+          <Grid
+            container
+            alignItems="center"
+            justifyContent="center"
+            flexDirection="row"
+          >
+            {/* <Box
+              component="img"
+              src={DravantiGold}
+              alt="Dravanti Gold Logo 2"
+              sx={{
+                width: { xs: 100, sm: 120, md: 150, lg: 150 },
+                height: { xs: 60, sm: 80, md: 100, lg: 100 },
+                marginRight: 1,
+              }}
+              loading="lazy"
+            /> */}
+            {/* <Typography
               variant="h5"
-              sx={{ fontWeight: '600', marginBottom: '20px', color: '#253136', fontSize: '30px', textAlign:'center' }}
-            >
-              Subscribe for updates
-            </Typography>
-
-            <TextField
-              variant="outlined"
-              label="Name"
-              fullWidth
+              align="center"
+              fontWeight="bold"
+              color="#253136"
+              className="average"
               sx={{
-                maxWidth: '698px',
-                marginBottom: '20px',
-                '& .MuiOutlinedInput-root': {
-                  borderRadius: '10px',
-                },
-              }}
-            />
-
-            <TextField
-              variant="outlined"
-              label="Your email address"
-              fullWidth
-              sx={{
-                maxWidth: '698px',
-                marginBottom: '20px',
-                '& .MuiOutlinedInput-root': {
-                  borderRadius: '10px',
-                },
-              }}
-            />
-
-            <Button
-              variant="contained"
-              fullWidth
-              sx={{
-                backgroundColor: '#1f2933',
-                color: 'white',
-                borderRadius: '50px',
-                padding: '10px 0',
-                fontSize: '16px',
-                textTransform: 'none',
-                maxWidth: '698px',
-                '&:hover': {
-                  backgroundColor: '#1b232a',
-                },
+                fontSize: { xs: 25, sm: 30, md: 45, lg: 50 },
+                fontWeight: "bold",
+                lineHeight: { xs: "30px", sm: "40px", md: "50px", lg: "55px" },
               }}
             >
-              Send
-            </Button>
-
-            <Typography
-              variant="body2"
-              sx={{
-                marginTop: '15px',
-                color: '#475355',
-                fontSize: '14px',
-                maxWidth: '698px',
-                fontStyle:'italic',
-                textAlign:'center'
-              }}
-            >
-              Dravanti does not maintain a Newsletter, and will only send information on key announcements.
-            </Typography>
+              DRAVANTI
+              <Typography
+                variant="h6"
+                align="center"
+                fontWeight="bold"
+                textAlign="left"
+                fontSize={{ xs: 20, sm: 24, md: 31, lg: 35 }}
+                color="#253136"
+                sx={{
+                  lineHeight: {
+                    xs: "24px",
+                    sm: "32px",
+                    md: "40px",
+                    lg: "45px",
+                  },
+                }}
+              >
+                Middle East
+              </Typography>
+            </Typography> */}
           </Grid>
         </Grid>
-      </StyledContainer>
-    </Box>
+
+        <Grid item xs={12} md={7}>
+          <Box sx={{ textAlign: "center", mb: 3 }}>
+            <Typography variant="h4" fontWeight="bold" gutterBottom>
+              Subscribe for updates
+            </Typography>
+          </Box>
+
+          <Box
+            component="form"
+            onSubmit={handleSubmit(onSubmit)}
+            noValidate
+            autoComplete="off"
+          >
+            <TextField
+              fullWidth
+              label="Name"
+              variant="outlined"
+              margin="normal"
+              error={!!errors.name}
+              helperText={
+                errors.name
+                  ? "This field is required. Please input your name"
+                  : ""
+              }
+              {...register("name", { required: "Name is required" })}
+            />
+            <TextField
+              fullWidth
+              label="Your email address"
+              variant="outlined"
+              margin="normal"
+              type="email"
+              error={!!errors.email}
+              helperText={
+                errors.email
+                  ? "This field is required. Please input a valid email "
+                  : ""
+              }
+              {...register("email", { required: "Email is required" })}
+            />
+            <Box textAlign="left" mt={2}>
+              <Button
+                variant="contained"
+                type="submit"
+                sx={{
+                  backgroundColor: "black",
+                  color: "white",
+                  paddingX: 3,
+                  fontSize: "14px",
+                  borderRadius: "20px",
+                  "&:hover": {
+                    backgroundColor: "#81A89F",
+                  },
+                  width: "100%",
+                }}
+                className="dmSans"
+              >
+                Send
+              </Button>
+            </Box>
+            <Typography
+            // className="roboto"
+              sx={{ fontSize: 15, textAlign: "center", marginTop: "20px",color:'#475355' }}
+            >
+              Dravanti does not maintain a Newsletter, and will only send
+              information on key announcements.
+            </Typography>
+          </Box>
+        </Grid>
+      </Grid>
+    </Container>
   );
 };
 
-export default SubscribeForm;
+export default SubscribeForUpdates;
