@@ -22,6 +22,7 @@ const OptimizationSection = () => {
         direction={isSmallScreen || isTabletScreen ? "column" : "row"}
         alignItems="flex-start" // Align text section with top of image
         justifyContent="center"
+        sx={{ paddingX: { xs: '2rem', md:'0.1rem' } }}
       >
         {/* Image Section */}
         <Grid item xs={12} sm={8} md={3.6}>

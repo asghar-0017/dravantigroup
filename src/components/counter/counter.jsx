@@ -5,8 +5,8 @@ import { useSpring, animated } from "react-spring";
 import { useInView } from "react-intersection-observer";
 
 const data = [
-  { value: 20, label: "Billion in assets" },
-  { value: 3, label: "Commodities and growing" },
+  { value: 25, label: "Billion in assets" },
+  { value: 4, label: "Commodities and growing" },
   { value: 5, label: "Partners" },
   { value: 250, label: "Combined years of experience" },
 ];
@@ -33,11 +33,12 @@ const AnimatedNumber = ({ targetValue }) => {
 const CircleItem = ({ value, label }) => (
   <Box
     sx={{
-      width: { xs: 250, sm: 300, md: 300 },
-      height: { xs: 250, sm: 300, md: 300 },
+      width: { xs: 230, sm: 300, md: 305 },
+      height: { xs: 230, sm: 300, md: 305 },
+      marginLeft:{xs:6 , sm:0 , md: 0},
       borderRadius: "50%",
       backgroundColor: "",
-      border: "1px solid rgba(255, 255, 255, 0.2)",
+      border: "1px solid #3D5059",
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
@@ -52,9 +53,9 @@ const CircleItem = ({ value, label }) => (
       color="#DBE8E8"
       fontSize={46}
       className="dmSans"
-      sx={{ fontWeight: "bold", display: "flex", flexDirection: "row" }}
+      sx={{ fontWeight: "bold", display: "flex", flexDirection: "row" ,justifyContent:'center',alignItems:'center'}}
     >
-      {value == 20 ? "$" : ""}
+      {value === 25 ? "$" : ""}
       <AnimatedNumber targetValue={value} />
       &nbsp;+
     </Typography>
@@ -77,18 +78,19 @@ const Counter = ({ bg }) => {
   return (
     <Box
       sx={{
-        backgroundColor: `#${bg}`,
-        py: 5,
+        backgroundColor: `#325A74`,
+        py: 4,
         display: "flex",
         justifyContent: "center",
+        alignItems:'center',
         paddingTop: 10,
         paddingBottom: 10,
       }}
-      className='hover-target'
+      className="hover-target"
     >
-      <Grid container spacing={2} justifyContent="center" alignItems="center">
+      <Grid container spacing={-5} display="flex" justifyContent="center" alignItems="center">
         {data.map((item, index) => (
-          <Grid item key={index}>
+          <Grid item xs={12} sm={6} md={3} key={index}>
             <CircleItem value={item.value} label={item.label} />
           </Grid>
         ))}

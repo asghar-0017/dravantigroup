@@ -1,7 +1,8 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import "../../assets/style/footer.css";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
 import { FaLinkedin, FaTelegram, FaTwitter } from "react-icons/fa";
 
 import logo from "../../assets/images/logo.png";
@@ -16,6 +17,12 @@ import {
 } from "@mui/material";
 
 const Footer = () => {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   const {
     register,
     handleSubmit,
