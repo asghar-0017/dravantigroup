@@ -41,7 +41,7 @@ const ContactUs = () => {
             alt="Contact Us"
             sx={{
               width: "98.5%",
-              height: "100%",
+              height: { xs: "100%", md: "900px"},
               paddingTop: "10px",
               objectFit: "cover",
               paddingBottom: "10px",
