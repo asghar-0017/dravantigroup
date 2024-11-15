@@ -14,6 +14,7 @@ const GulfInternational = lazy(() => import("../../pages/partner1/GulfInternatio
 const Privacy = lazy(() => import("../../pages/privacy/privacy"));
 const Cookies = lazy(() => import("../../pages/cookies/Cookies"));
 const Terms = lazy(() => import("../../pages/Terms/Terms"));
+const ContactUs = lazy(() => import("../../pages/contact/contact"));
 
 const MainRouter = () => {
   const location = useLocation();
@@ -42,6 +43,9 @@ const MainRouter = () => {
 
         {/* News Page */}
         <Route path="/news" element={<News />} />
+
+        {/* Contact Us Page */}
+        <Route path="/contact-us" element={<ContactUs />} />
 
         {/* Partner Pages */}
         <Route path="/interMTraders" element={<InterMTraders />} />

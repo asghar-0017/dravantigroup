@@ -115,7 +115,6 @@ const InvestorRegistrationForm = () => {
               Investor Registration
             </Typography>
           </Box>
-
           <Box
             component="form"
             onSubmit={handleSubmit(onSubmit)}
