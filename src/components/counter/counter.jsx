@@ -53,7 +53,7 @@ const CircleItem = ({ value, label }) => (
       color="#DBE8E8"
       fontSize={46}
       className="dmSans"
-      sx={{ fontWeight: "bold", display: "flex", flexDirection: "row" }}
+      sx={{ fontWeight: "bold", display: "flex", flexDirection: "row" ,justifyContent:'center',alignItems:'center'}}
     >
       {value === 25 ? "$" : ""}
       <AnimatedNumber targetValue={value} />
@@ -82,12 +82,13 @@ const Counter = ({ bg }) => {
         py: 4,
         display: "flex",
         justifyContent: "center",
+        alignItems:'center',
         paddingTop: 10,
         paddingBottom: 10,
       }}
       className="hover-target"
     >
-      <Grid container spacing={2} justifyContent="center" alignItems="center">
+      <Grid container spacing={-5} display="flex" justifyContent="center" alignItems="center">
         {data.map((item, index) => (
           <Grid item xs={12} sm={6} md={3} key={index}>
             <CircleItem value={item.value} label={item.label} />

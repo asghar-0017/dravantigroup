@@ -7,8 +7,9 @@ import logo from '../../assets/images/logo2.webp';
 const StyledContainer = styled(Container)({
   backgroundColor: 'white',
   borderRadius: '20px',
-  padding: '30px',
+  padding: '30px ',
   boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
+  // width:'100%',
   maxWidth: '800px',
   margin:'3rem 1rem 9.5rem 1rem',
 });
@@ -17,17 +18,17 @@ const SubscribeForm = () => {
   return (
     <Box
       sx={{
+        width:"100%",
         backgroundColor: '#253136',
         display: 'flex',
-
-
-        // justifyContent: 'center',
-        // alignItems: 'center',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding:'2rem'
 
       }}
     >
       <StyledContainer>
-        <Grid container spacing={5} alignItems="center">
+        <Grid container spacing={12} alignItems="center">
           <Grid item xs={12} md={5} sx={{ display: 'flex', justifyContent: 'center' }}>
             <img
               src={logo}

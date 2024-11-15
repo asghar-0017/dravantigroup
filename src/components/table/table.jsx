@@ -1,4 +1,5 @@
 import React from "react";
+import { FaRocket } from "react-icons/fa";
 import {
   Box,
   Grid,
@@ -55,7 +56,7 @@ export const TableSection = ({ content }) => (
                 flexDirection: "column",
                 justifyContent: "space-between",
                 alignItems: "flex-start",
-                padding: 2,
+                paddingX: 4,
                 boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
                 borderRadius: 1,
                 border: "1px solid #E0E0E0",
@@ -84,7 +85,7 @@ export const TableSection = ({ content }) => (
                     display: "inline-block",
                   }}
                 >
-                  🚀
+                  <FaRocket />
                 </Box>
 
                 {/* Updated className to "heading" for animation */}
@@ -95,6 +96,7 @@ export const TableSection = ({ content }) => (
                     color: "#474747",
                     fontSize: { xs: "18px", md: "22px" },
                     mb: 1,
+                    fontWeight:'600'
                   }}
                 >
                   {item.heading}
