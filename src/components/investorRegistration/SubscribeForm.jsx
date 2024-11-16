@@ -185,6 +185,6 @@ const SubscribeForUpdates = () => {
       </Grid>
     </Container>
   );
-};
+}
 
 export default SubscribeForUpdates;
